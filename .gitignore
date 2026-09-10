@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasets
+02_datasets/
+*.zip
+*.rar
+
+# Model weights
+05_models/
+*.pt
+*.pth
+*.onnx
+
+# Training outputs
+runs/
+logs/
+
+# Results generated automatically
+06_results/temp/
+
+# OS files
+.DS_Store
+Thumbs.db
