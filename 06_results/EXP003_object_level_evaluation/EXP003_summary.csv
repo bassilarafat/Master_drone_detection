@@ -1,0 +1,2 @@
+Experiment,Split,Confidence_Threshold,Matching_IoU,Image_Size,GT_Objects,Predictions,TP,FP,FN,Precision,Recall,F1
+EXP003_YOLOv8s_P2_960,val,0.25,0.5,960,2621,2616,2440,176,181,0.9327217125382263,0.9309423884013736,0.9318312010693146
