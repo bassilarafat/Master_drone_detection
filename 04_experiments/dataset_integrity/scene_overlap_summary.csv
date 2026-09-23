@@ -1,0 +1,5 @@
+SSIM_threshold,similar_pairs,train_test_pairs,unique_train_in_train_test,unique_test_in_train_test,train_val_pairs,unique_val_in_train_val,val_test_pairs,unique_test_in_val_test
+0.95,1763,1763,439,211,0,0,0,0
+0.97,1316,1316,358,188,0,0,0,0
+0.98,865,865,288,163,0,0,0,0
+0.99,138,138,71,73,0,0,0,0
