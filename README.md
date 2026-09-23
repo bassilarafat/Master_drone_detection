@@ -44,6 +44,7 @@ notebooks      - Exploration, visualization, and interactive analysis
 Run commands from the repository root with the project virtual environment active.
 
 ```powershell
+pip install -r requirements.txt
 python 03_code/environment_check.py
 python 03_code/train_exp002_high_resolution.py
 python 03_code/evaluate_exp002.py

@@ -3,6 +3,7 @@ import torch
 import platform
 import cv2
 import numpy as np
+import skimage
 
 print("="*50)
 print("MASTER DRONE DETECTION ENVIRONMENT")
@@ -15,6 +16,7 @@ print("\nLibraries:")
 print("PyTorch:", torch.__version__)
 print("OpenCV:", cv2.__version__)
 print("NumPy:", np.__version__)
+print("scikit-image:", skimage.__version__)
 
 print("\nCUDA:")
 print("CUDA Available:", torch.cuda.is_available())
