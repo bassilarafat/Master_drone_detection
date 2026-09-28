@@ -1,0 +1,49 @@
+# HEPAN-lite experiment
+# YOLO26s + P2 + multi-scale fusion
+
+
+nc: 1
+
+end2end: true
+
+reg_max: 1
+
+
+backbone:
+
+# نفس backbone بتاع YOLO26s
+
+
+head:
+
+# P5 -> P4
+- [-1, 1, nn.Upsample, [None, 2, nearest]]
+
+- [[-1, 6], 1, Concat, [1]]
+
+- [-1, 2, C3k2, [512, true]]
+
+
+# P4 -> P3
+
+- [-1,1,nn.Upsample,[None,2,nearest]]
+
+- [[-1,4],1,Concat,[1]]
+
+- [-1,2,C3k2,[256,true]]
+
+
+# P3 -> P2
+
+- [-1,1,nn.Upsample,[None,2,nearest]]
+
+- [[-1,2],1,Concat,[1]]
+
+- [-1,2,C3k2,[128,true]]
+
+  # HEPAN fusion branch
+- [[19, 22, 25, 28], 1, Concat, [1]]
+- [-1, 1, C3k2, [1024, True]]
+
+# Detect
+- [[19, 22, 25, 28], 1, Detect, [nc]]
