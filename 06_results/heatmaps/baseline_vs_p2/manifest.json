@@ -1,0 +1,514 @@
+{
+  "method": "sigmoid of active per-scale class logits; bilinear restore; max across scales",
+  "color_scale": [
+    0,
+    1
+  ],
+  "class_id": 0,
+  "class_name": "UAV",
+  "imgsz": 960,
+  "rect": false,
+  "nms": true,
+  "iou": 0.7,
+  "confidence": 0.25,
+  "device": "cpu",
+  "ultralytics": "8.4.157",
+  "baseline": {
+    "path": "D:\\master\\Master_Drone_Detection\\04_experiments\\YOLO26s_baseline-5\\weights\\best.pt",
+    "sha256": "13360cdd96314739c8b22ae56161d065bf03387ad2676094e321a02643ccaf67"
+  },
+  "p2": {
+    "path": "D:\\master\\Master_Drone_Detection\\04_experiments\\YOLO26s_P2_transfer_learning\\weights\\best.pt",
+    "sha256": "5ec4c692ac324d62889a0314bd5cf767c453d41f96eef94137398299f8b3613f"
+  },
+  "images": [
+    {
+      "source": "D:\\master\\Master_Drone_Detection\\02_datasets\\DUT_Anti_UAV\\images\\val\\00180.jpg",
+      "shape": [
+        720,
+        1280
+      ],
+      "ground_truth": [
+        [
+          604.0,
+          345.00024,
+          632.99968,
+          365.0004
+        ]
+      ],
+      "baseline": {
+        "branch": "one2many",
+        "strides": [
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          16,
+          19,
+          22
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              601.9850463867188,
+              343.6220703125,
+              635.6717529296875,
+              365.1868591308594
+            ],
+            "confidence": 0.7682940363883972,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 0.7682940363883972
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 0.7575727701187134
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 0.0002244373463327065
+          }
+        }
+      },
+      "p2": {
+        "branch": "one2many",
+        "strides": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          19,
+          22,
+          25,
+          28
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              603.2109375,
+              344.4354248046875,
+              634.55712890625,
+              364.9222412109375
+            ],
+            "confidence": 0.7863877415657043,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P2/4": {
+            "grid_shape": [
+              240,
+              240
+            ],
+            "peak_class_score": 0.7863877415657043
+          },
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 0.00291666341945529
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 0.0004956016200594604
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 9.137741290032864e-05
+          }
+        }
+      },
+      "comparison": "01_00180_comparison.png",
+      "scales": "01_00180_scales.png"
+    },
+    {
+      "source": "D:\\master\\Master_Drone_Detection\\02_datasets\\DUT_Anti_UAV\\images\\val\\00091.jpg",
+      "shape": [
+        720,
+        1280
+      ],
+      "ground_truth": [
+        [
+          755.0003200000001,
+          291.99996,
+          835.0003200000001,
+          349.0002
+        ]
+      ],
+      "baseline": {
+        "branch": "one2many",
+        "strides": [
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          16,
+          19,
+          22
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              753.3131713867188,
+              293.0423889160156,
+              832.7444458007812,
+              347.0663146972656
+            ],
+            "confidence": 0.8818728923797607,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 0.8461307287216187
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 0.8818728923797607
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 0.000136038928758353
+          }
+        }
+      },
+      "p2": {
+        "branch": "one2many",
+        "strides": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          19,
+          22,
+          25,
+          28
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              752.9113159179688,
+              295.0421447753906,
+              832.5166015625,
+              347.15966796875
+            ],
+            "confidence": 0.8596775531768799,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P2/4": {
+            "grid_shape": [
+              240,
+              240
+            ],
+            "peak_class_score": 0.8596775531768799
+          },
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 5.800094641017495e-06
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 0.015966253355145454
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 4.313230965635739e-05
+          }
+        }
+      },
+      "comparison": "02_00091_comparison.png",
+      "scales": "02_00091_scales.png"
+    },
+    {
+      "source": "D:\\master\\Master_Drone_Detection\\02_datasets\\DUT_Anti_UAV\\images\\val\\00001.jpg",
+      "shape": [
+        300,
+        527
+      ],
+      "ground_truth": [
+        [
+          257.999701,
+          52.000049999999995,
+          369.999849,
+          121.99995
+        ]
+      ],
+      "baseline": {
+        "branch": "one2many",
+        "strides": [
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          16,
+          19,
+          22
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              252.59568786621094,
+              49.481468200683594,
+              371.8885803222656,
+              125.2264633178711
+            ],
+            "confidence": 0.9045395255088806,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 4.333101969677955e-05
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 0.6806911826133728
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 0.9045395255088806
+          }
+        }
+      },
+      "p2": {
+        "branch": "one2many",
+        "strides": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          19,
+          22,
+          25,
+          28
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              248.21939086914062,
+              49.08063888549805,
+              370.4915466308594,
+              125.12604522705078
+            ],
+            "confidence": 0.8753213286399841,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P2/4": {
+            "grid_shape": [
+              240,
+              240
+            ],
+            "peak_class_score": 1.7341497368761338e-05
+          },
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 1.3626120562548749e-05
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 0.8753213286399841
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 1.2189094377390575e-05
+          }
+        }
+      },
+      "comparison": "03_00001_comparison.png",
+      "scales": "03_00001_scales.png"
+    },
+    {
+      "source": "D:\\master\\Master_Drone_Detection\\02_datasets\\DUT_Anti_UAV\\images\\val\\00002.jpg",
+      "shape": [
+        281,
+        500
+      ],
+      "ground_truth": [
+        [
+          127.99999999999997,
+          106.00008449999999,
+          454.99999999999994,
+          246.0001855
+        ]
+      ],
+      "baseline": {
+        "branch": "one2many",
+        "strides": [
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          16,
+          19,
+          22
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              105.63279724121094,
+              93.2232437133789,
+              451.63079833984375,
+              247.81068420410156
+            ],
+            "confidence": 0.7754867672920227,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 3.974271749029867e-06
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 6.935668807273032e-06
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 0.7754867672920227
+          }
+        }
+      },
+      "p2": {
+        "branch": "one2many",
+        "strides": [
+          4,
+          8,
+          16,
+          32
+        ],
+        "layers": [
+          19,
+          22,
+          25,
+          28
+        ],
+        "predictions": [
+          {
+            "xyxy": [
+              107.3753890991211,
+              98.03900909423828,
+              445.60235595703125,
+              249.60226440429688
+            ],
+            "confidence": 0.7654026746749878,
+            "class_id": 0
+          }
+        ],
+        "scales": {
+          "P2/4": {
+            "grid_shape": [
+              240,
+              240
+            ],
+            "peak_class_score": 8.539159898646176e-05
+          },
+          "P3/8": {
+            "grid_shape": [
+              120,
+              120
+            ],
+            "peak_class_score": 1.042303119902499e-05
+          },
+          "P4/16": {
+            "grid_shape": [
+              60,
+              60
+            ],
+            "peak_class_score": 1.2396874808473513e-05
+          },
+          "P5/32": {
+            "grid_shape": [
+              30,
+              30
+            ],
+            "peak_class_score": 0.7654026746749878
+          }
+        }
+      },
+      "comparison": "04_00002_comparison.png",
+      "scales": "04_00002_scales.png"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# New runs are kept separate from historical baseline-5 results.
+name: YOLO26s_baseline_configured
+model: notebooks/yolo26s.pt
+data: 02_datasets/DUT_Anti_UAV/data.yaml
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 4
+  device: "0"
+  workers: 2
+  seed: 0
+  deterministic: true
+  patience: 100

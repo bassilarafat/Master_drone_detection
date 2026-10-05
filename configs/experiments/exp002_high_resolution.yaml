@@ -1,0 +1,12 @@
+# Same defaults as the original 03_code/train_exp002_high_resolution.py.
+name: YOLOv8s_960
+project: 04_experiments/EXP002_YOLOv8s_high_resolution
+model: 05_models/pretrained/yolov8s.pt
+data: 02_datasets/DUT_Anti_UAV/data.yaml
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 4
+  device: "0"
+  patience: 20
+  workers: 4

@@ -1,45 +1,12 @@
-import torch
-import torch.nn as nn
+"""Compatibility import for older notebooks; implementation lives in src/."""
 
+import sys
+from pathlib import Path
 
-class GAM(nn.Module):
-    def __init__(self, channels, reduction=4):
-        super().__init__()
+_SOURCE_ROOT = Path(__file__).resolve().parents[2] / "src"
+if str(_SOURCE_ROOT) not in sys.path:
+    sys.path.insert(0, str(_SOURCE_ROOT))
 
-        self.channel_attention = nn.Sequential(
-            nn.AdaptiveAvgPool2d(1),
-            nn.Conv2d(
-                channels,
-                channels // reduction,
-                1
-            ),
-            nn.ReLU(),
-            nn.Conv2d(
-                channels // reduction,
-                channels,
-                1
-            ),
-            nn.Sigmoid()
-        )
+from drone_detection.models.attention import GAM
 
-        self.spatial_attention = nn.Sequential(
-            nn.Conv2d(
-                channels,
-                channels,
-                7,
-                padding=3,
-                groups=channels
-            ),
-            nn.Sigmoid()
-        )
-
-
-    def forward(self, x):
-
-        ca = self.channel_attention(x)
-        x = x * ca
-
-        sa = self.spatial_attention(x)
-        x = x * sa
-
-        return x
+__all__ = ["GAM"]

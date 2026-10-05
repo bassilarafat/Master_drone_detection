@@ -1,0 +1,13 @@
+name: YOLO26s_P2_configured
+model: configs/models/yolo26s_p2.yaml
+data: 02_datasets/DUT_Anti_UAV/data.yaml
+pretrained: 04_experiments/YOLO26s_baseline-5/weights/best.pt
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 2
+  device: "0"
+  workers: 2
+  seed: 0
+  deterministic: true
+  patience: 100

@@ -1,6 +1,6 @@
 torch
 torchvision
-ultralytics
+ultralytics==8.4.157
 opencv-python
 numpy
 pandas
@@ -8,3 +8,5 @@ matplotlib
 seaborn
 tqdm
 scikit-image
+PyYAML
+Pillow

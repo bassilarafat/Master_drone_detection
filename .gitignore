@@ -3,6 +3,12 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.cache/
+Ultralytics/
 
 # Virtual environment
 .venv/
@@ -25,8 +31,21 @@ __pycache__/
 runs/
 logs/
 
+# New run artifacts stay local. Already tracked research evidence is retained.
+04_experiments/**/weights/
+04_experiments/**/*.png
+04_experiments/**/*.jpg
+04_experiments/**/*.jpeg
+04_experiments/**/args.yaml
+04_experiments/**/results.csv
+04_experiments/**/experiment.json
+04_experiments/**/events.out.tfevents.*
+
 # Results generated automatically
 06_results/temp/
+06_results/heatmaps/*
+# Keep the initial four-image comparison as versioned reference results.
+!06_results/heatmaps/baseline_vs_p2/
 
 # OS files
 .DS_Store

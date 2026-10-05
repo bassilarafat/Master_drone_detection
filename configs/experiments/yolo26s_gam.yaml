@@ -1,0 +1,14 @@
+# Corrected GAM connection. This is a NEW architecture, not the old GAM run.
+name: YOLO26s_GAM_connected
+model: configs/models/yolo26s_gam.yaml
+data: 02_datasets/DUT_Anti_UAV/data.yaml
+pretrained: 04_experiments/YOLO26s_baseline-5/weights/best.pt
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 4
+  device: "0"
+  workers: 2
+  seed: 0
+  deterministic: true
+  patience: 100
