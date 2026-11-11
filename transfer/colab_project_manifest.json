@@ -1,21 +1,13 @@
 {
   "status": "TRANSFER_READY_NOT_UPLOADED",
   "reason": "No Google Drive mount was detected on the local Windows machine.",
-  "target": "MyDrive/Master_Drone_Detection",
-  "copy_method": "Copy the repository while preserving relative paths; include the listed paths and the frozen Clean_v2 release.",
+  "canonical_source": "https://github.com/bassilarafat/Master_drone_detection.git@504fa9dae6f1e4fc3f156a6ea93a6d9121b53515",
+  "target": "MyDrive/Master_Drone_Detection_Assets",
+  "copy_method": "Upload only the large assets below; Colab clones the canonical source from GitHub.",
   "include": [
-    "src",
-    "configs",
-    "docs",
-    "scripts",
-    "tests",
-    "notebooks/YOLO26_E0_Seed17_Colab.ipynb",
-    "pyproject.toml",
-    "requirements.txt",
-    "02_datasets/DUT_Anti_UAV_Clean_v2",
-    "05_models/pretrained/paper/yolo26s.pt",
-    "06_results/paper_yolo26/preflight.json",
-    "configs/datasets/DUT_Anti_UAV_Clean_v2.release.json"
+    "datasets/DUT_Anti_UAV_Clean_v2",
+    "models/yolo26s.pt",
+    "experiments/paper_yolo26"
   ],
   "exclude": [
     ".git",
@@ -26,5 +18,6 @@
     "04_experiments/**/weights",
     "old giant temporary outputs"
   ],
-  "not_uploaded": true
+  "not_uploaded": true,
+  "source_commit": "504fa9dae6f1e4fc3f156a6ea93a6d9121b53515"
 }

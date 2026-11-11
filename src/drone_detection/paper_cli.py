@@ -40,6 +40,7 @@ def main(argv=None):
     a=sub.add_parser('model-dry-run');a.add_argument('--output',type=project_path,default=project_path('06_results/paper/dry_runs/model_initialization.json'))
     a=sub.add_parser('yolo26-preflight');a.add_argument('--output',type=project_path,default=project_path('06_results/paper_yolo26/preflight.json'))
     sub.add_parser('yolo26-train-e0')
+    a=sub.add_parser('yolo26-dry-run');a.add_argument('--output',type=project_path,required=True)
     a=sub.add_parser('train');a.add_argument('--config',required=True);a.add_argument('--seed',type=int);a.add_argument('--execute-training',action='store_true')
     a=sub.add_parser('evaluate');a.add_argument('--config',required=True);a.add_argument('--checkpoint',type=project_path,required=True);a.add_argument('--output',type=project_path,required=True);a.add_argument('--split',choices=('train','val'),default='val');a.add_argument('--dry-run',action='store_true')
     for command in ('mine-negatives','random-negatives','freeze-negatives'):
@@ -66,6 +67,10 @@ def main(argv=None):
     elif args.command=='yolo26-train-e0':
         from .yolo26_runner import train_e0
         result=train_e0(17)
+    elif args.command=='yolo26-dry-run':
+        from .yolo26_runner import dry_run_e0
+        result=dry_run_e0()
+        write_json(args.output, result)
     elif args.command=='train':
         from .paper_runner import train
         result=train(args.config,args.seed,execute=args.execute_training)

@@ -28,6 +28,30 @@ def _config() -> dict:
     return values
 
 
+def dry_run_e0() -> dict:
+    config = _config()
+    protocol = _load_protocol()
+    return {
+        "status": "READY_FOR_APPROVED_TRAINING",
+        "experiment_id": config["experiment_id"],
+        "seed": 17,
+        "dataset": config["dataset"],
+        "imgsz": config["imgsz"],
+        "epochs": config["epochs"],
+        "batch": config["batch"],
+        "nbs": config["nbs"],
+        "optimizer": config["optimizer"],
+        "lr0": config["lr0"],
+        "momentum": config["momentum"],
+        "weight_decay": config["weight_decay"],
+        "test_locked": protocol["controls"]["test_locked"],
+        "e1_started": False,
+        "e2_started": False,
+        "e3_started": False,
+        "training_called": False,
+    }
+
+
 def _train(config: dict, output: Path, seed: int) -> Path:
     from ultralytics import YOLO
     from ultralytics.models.yolo.detect.train import DetectionTrainer
