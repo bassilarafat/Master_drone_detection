@@ -1,0 +1,20 @@
+{
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "ultralytics": "8.4.157",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.3",
+    "opencv-python": "5.0.0.93",
+    "scipy": "1.17.1"
+  },
+  "implementation_sha256": {
+    "engine\\trainer.py": "4740696dc798dfe05246694fe7082d224104e3fc09b0fe53a320512c69f005f8",
+    "utils\\metrics.py": "ba950563522fc3f5d630cc9217c229ce385c12468bade847dde518fcbf587c97",
+    "nn\\tasks.py": "aa5e52c3d1991a67b70cccbf10b941b4da0f6c9eb9b78baae90a4421ab67f2fc",
+    "cfg\\default.yaml": "0694fa6be3656888b893a67aadc4b17240a0d190cf799b10c347e96150b729b7"
+  }
+}

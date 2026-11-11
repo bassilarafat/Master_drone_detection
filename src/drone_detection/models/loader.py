@@ -63,3 +63,21 @@ def load_model(
     if weights_file is not None:
         model.load(str(weights_file))
     return model
+
+
+def transfer_backbone_weights(target, source, *, last_module_exclusive: int) -> list[str]:
+    """Transfer matching backbone tensors through a declared module boundary."""
+    target_state = target.state_dict()
+    source_state = source.state_dict()
+    keys = [
+        key
+        for key in target_state
+        if key.startswith("model.")
+        and int(key.split(".", 2)[1]) < last_module_exclusive
+    ]
+    if any(key not in source_state or source_state[key].shape != target_state[key].shape for key in keys):
+        raise ValueError("Declared shared backbone tensors differ in name or shape")
+    target.load_state_dict({key: source_state[key] for key in keys}, strict=False)
+    if not all(target.state_dict()[key].equal(source_state[key]) for key in keys):
+        raise ValueError("Backbone transfer verification failed")
+    return keys

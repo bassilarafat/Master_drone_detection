@@ -1,0 +1,19 @@
+{
+  "protocol_sha256": "a4f55bb5a419939aa3c5cf2cfd2f4dd4eaf0bcac7524f674df217e36e1c36876",
+  "config_sha256": {
+    "E0": "b73146adb4a0fc62d44b83c6d92eb9d9774ce5f386500cf654101d7da26ef629",
+    "E1": "ff11d907a4fcfa3c1eea95b7d31139efb13a2c3dbf2a488da77e13f1f5d213ec",
+    "E2": "3f7395e518b01abefb076307862fa93aa5130a2f510d48d84f1c07645a486cf5",
+    "E3": "c02cefa5363abd9f5e238cbfc2d18398123c6cb4ffed2a92412c4c7202338727"
+  },
+  "dataset_release": {
+    "path": "02_datasets/DUT_Anti_UAV_Clean_v2",
+    "release_id": "DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "manifest_sha256": "ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "freeze_sha256": "9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058",
+    "release_record": "configs/datasets/DUT_Anti_UAV_Clean_v2.release.json",
+    "release_record_sha256": "4b923ae230a4dd80b62f51b9cf2e4bc98bcb2b430392a84eaaa5513e484755a5"
+  },
+  "training_started": false,
+  "test_unlocked": false
+}

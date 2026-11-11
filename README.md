@@ -110,6 +110,61 @@ includes comparisons for tiny, small, medium and large UAVs, with PNG/PDF figure
 
 ## Checks and documentation
 
+For the dated, immutable `DUT_Anti_UAV_Clean_v1` dataset release, its duplicate
+and annotation exclusion policy, and verification commands, see
+[clean dataset release](docs/dataset_clean_v1.md). New experiments must explicitly
+select the release's own `data.yaml`; existing configurations retain their
+historical dataset. The project training command verifies frozen releases and
+prevents in-place label caches. This cleanup does not establish scene/video
+independence between the existing splits.
+
+[Gate 2 source recovery and scene audit](docs/scene_sequence_audit.md) records
+the original Tracking sequences, unresolved Detection provenance and reviewed
+scene overlap across Train/Validation/Test without modifying the frozen release.
+
+`Clean_v1` is blocked for new project training because that scene-independence
+gate failed. The immutable `DUT_Anti_UAV_Clean_v2` release uses whole confirmed
+scene groups and conservative allocation blocks. See the
+[v2 methodology and final counts](docs/dataset_clean_v2.md) and
+[verified release identity](configs/datasets/DUT_Anti_UAV_Clean_v2.release.json).
+It passes the declared scene audit; native sequence identities remain unknown.
+No detector training was performed when creating this release.
+
+For Gate 3 readiness, the controlled E0--E3 plan and the unified evaluator, see
+[paper protocol](docs/paper_protocol.md). The `paper` commands provide dry-runs,
+explicitly opted-in future training, Train-only negative preparation and
+Train/Val evaluation. Final Test has no unlock option in this workflow.
+
+The current YOLO26 paper milestone and reproducibility state are documented in
+[YOL026 paper milestone](docs/YOL026_PAPER_MILESTONE_20261111.md) and the
+[YOLO26 protocol](docs/paper_protocol_yolo26.md). Only E0_Y26 Seed 17 is
+authorized next; E1/E2/E3 and Test remain locked.
+
+For visual review of every YOLO26 false positive and a single correction without
+training, see [YOLO26 FP review](docs/yolo26_fp_review.md).
+
+Normalize dataset labels safely, using each image's dimensions and preserving
+the YOLO `class x_center y_center width height` format:
+
+```powershell
+python -m drone_detection dataset-normalize `
+  --dataset 02_datasets/DUT_Anti_UAV `
+  --output-dir 06_results/dataset_normalization
+python -m drone_detection dataset-normalize `
+  --dataset 02_datasets/DUT_Anti_UAV `
+  --output-dir 06_results/dataset_normalization `
+  --write
+```
+
+The first command is read-only. The `--write` command backs up changed labels
+before replacing them and records all changes in `changes.csv`.
+
+For one YOLOv8s-P2 hard-negative experiment using the existing EXP003 checkpoint,
+see [targeted fine-tuning protocol](docs/targeted_finetuning.md). The workflow
+includes training-only mining, a 16-pixel GT safety margin, split/source audits,
+small data dry runs and fixed-protocol evaluation. Training is blocked until
+the data audit passes; historical baseline outputs remain intact.
+
 ```powershell
 python -m unittest discover -s tests -v
 ```

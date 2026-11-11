@@ -1,0 +1,12 @@
+{
+  "path": "05_models/pretrained/paper/yolov8s_coco_268e5bb5.pt",
+  "sha256": "268e5bb54c640c96c3510224833bc2eeacab4135c6deb41502156e39986b562d",
+  "bytes": 22573363,
+  "source_url": "https://huggingface.co/Ultralytics/YOLOv8/resolve/8a9e1a55f987a77f9966c2ac3f80aa8aa37b3c1a/yolov8s.pt",
+  "publisher": "Ultralytics",
+  "repository_commit": "8a9e1a55f987a77f9966c2ac3f80aa8aa37b3c1a",
+  "published_digest_url": "https://huggingface.co/Ultralytics/YOLOv8/raw/8a9e1a55f987a77f9966c2ac3f80aa8aa37b3c1a/yolov8s.pt",
+  "downloaded_at_utc": "2026-11-10T15:55:05.082554+00:00",
+  "remote_digest_independently_verified": true,
+  "training_performed": false
+}

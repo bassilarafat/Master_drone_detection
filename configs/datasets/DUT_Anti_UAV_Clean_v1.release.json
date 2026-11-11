@@ -1,0 +1,50 @@
+{
+  "dataset_name": "DUT_Anti_UAV_Clean_v1",
+  "created_at_utc": "2026-11-09T06:27:44.921534+00:00",
+  "manifest_sha256": "d2225406e2ce663121d878552ccadd63593c49ffb9a3c90ad0251d2ba805b408",
+  "freeze_sha256": "5333d581387a0cca460293679025ab47377598c8d6da88b1915e5070e8ea0fb7",
+  "files": 18912,
+  "counts": {
+    "train": {
+      "images": 5193,
+      "objects": 5238,
+      "negative_images": 1
+    },
+    "val": {
+      "images": 2597,
+      "objects": 2617,
+      "negative_images": 0
+    },
+    "test": {
+      "images": 1661,
+      "objects": 1706,
+      "negative_images": 0
+    }
+  },
+  "source_dataset_sha256": "e6733f40d30e86d3b37c1ef414d0ba13aff657ef1e479e3d1d8f750609a0fe71",
+  "scientific_limits": [
+    "Existing split membership is preserved; this is not a scene/video-disjoint resplit.",
+    "Known shared Train/Validation scenes and unresolved Test provenance remain.",
+    "Historical Test use during development is not undone by deduplication.",
+    "Current source annotations are frozen, not independently human-adjudicated ground truth."
+  ],
+  "dataset_yaml": "02_datasets/DUT_Anti_UAV_Clean_v1/data.yaml",
+  "created_at_cairo": "2026-11-09T08:27:44.921534+02:00",
+  "checks": {
+    "active_images": 9451,
+    "active_objects": 9561,
+    "exact_byte_duplicates_remaining": 0,
+    "exact_pixel_duplicates_remaining": 0,
+    "active_orphan_labels": 0,
+    "invalid_annotation_rows": 0,
+    "retained_images_and_labels_match_independent_source_audit": true,
+    "all_release_files_read_only": true,
+    "total_release_files": 18914,
+    "experiments_started": false
+  },
+  "excluded_reasons": {
+    "quarantine_conflicting_annotations": 8,
+    "invalid_annotation_or_image": 1,
+    "redundant_exact_duplicate": 539
+  }
+}

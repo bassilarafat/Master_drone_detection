@@ -1,0 +1,19 @@
+schema_version: 1
+experiment_id: E0_Y26
+protocol: configs/paper/protocol_yolo26.json
+architecture: E0
+dataset: 02_datasets/DUT_Anti_UAV_Clean_v2/data.yaml
+model: configs/paper/yolo26s-paper.yaml
+initialization: 05_models/pretrained/paper/yolo26s.pt
+imgsz: 960
+epochs: 100
+batch: 1
+nbs: 16
+optimizer: MuSGD
+lr0: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+seeds: [17, 42, 123]
+test_locked: true
+nms_free: false
+output_root: 04_experiments/paper_yolo26/E0_Y26

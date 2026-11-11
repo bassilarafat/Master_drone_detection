@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "protocol": "configs/paper/protocol_yolo26.json",
+  "models": [
+    {
+      "model": "E0",
+      "strides": [
+        8,
+        16,
+        32
+      ],
+      "expected_strides": [
+        8,
+        16,
+        32
+      ],
+      "strides_match": true,
+      "parameters": 9948638,
+      "transferred_module_boundary": "0..10 inclusive",
+      "transferred_tensors": 240,
+      "backbone_tensor_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "update": {
+        "loss": 16.788848876953125,
+        "optimizer": "MuSGD",
+        "ema_updated": true,
+        "trainable_parameters": 9948638
+      },
+      "device": "cuda:0",
+      "cuda_memory": {
+        "peak_allocated_bytes": 1250309632,
+        "peak_reserved_bytes": 1281359872
+      }
+    },
+    {
+      "model": "E1",
+      "strides": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected_strides": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "strides_match": true,
+      "parameters": 9663464,
+      "transferred_module_boundary": "0..10 inclusive",
+      "transferred_tensors": 240,
+      "backbone_tensor_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "update": {
+        "loss": 24.086402893066406,
+        "optimizer": "MuSGD",
+        "ema_updated": true,
+        "trainable_parameters": 9663464
+      },
+      "device": "cuda:0",
+      "cuda_memory": {
+        "peak_allocated_bytes": 1955736576,
+        "peak_reserved_bytes": 2019557376
+      }
+    }
+  ],
+  "identical_pretrained_backbones": true,
+  "training_called": false,
+  "real_dataset_inference": false,
+  "test_evaluated": false,
+  "note": "Synthetic one-batch forward/backward, MuSGD update, and EMA update only."
+}

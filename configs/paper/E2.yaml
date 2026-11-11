@@ -1,0 +1,125 @@
+schema_version: 1
+experiment_id: E2
+protocol: configs/paper/protocol.json
+protocol_sha256: a4f55bb5a419939aa3c5cf2cfd2f4dd4eaf0bcac7524f674df217e36e1c36876
+dataset:
+  path: 02_datasets/DUT_Anti_UAV_Clean_v2
+  release_id: DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5
+  manifest_sha256: ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5
+  freeze_sha256: 9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058
+  release_record: configs/datasets/DUT_Anti_UAV_Clean_v2.release.json
+  release_record_sha256: 4b923ae230a4dd80b62f51b9cf2e4bc98bcb2b430392a84eaaa5513e484755a5
+model:
+  path: configs/paper/yolov8s-p2-paper.yaml
+  sha256: 661ca741986f6cb78b46af587f82496b012115b75bdf61a8534960ebec85c131
+  source_sha256: ba54363e9f283e8f60b0fa0843eb37115093338d6f9273ccd4f74f60639754f4
+  source_url: https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/models/v8/yolov8-p2.yaml
+  package_version: 8.4.157
+initialization:
+  path: 05_models/pretrained/paper/yolov8s_coco_268e5bb5.pt
+  sha256: 268e5bb54c640c96c3510224833bc2eeacab4135c6deb41502156e39986b562d
+  source_url: https://huggingface.co/Ultralytics/YOLOv8/resolve/8a9e1a55f987a77f9966c2ac3f80aa8aa37b3c1a/yolov8s.pt
+  policy: COCO-pretrained shared backbone modules 0..9 only; neck/detection parameters
+    use the run-seeded standard initialization, including fixed DFL bin projection
+  remote_digest_independently_verified: true
+  repository_commit: 8a9e1a55f987a77f9966c2ac3f80aa8aa37b3c1a
+seeds:
+- 17
+- 42
+- 123
+default_seed: 17
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 1
+  nbs: 16
+  optimizer: SGD
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  cos_lr: true
+  warmup_epochs: 0.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  patience: 0
+  device: '0'
+  workers: 0
+  amp: false
+  cache: false
+  rect: false
+  multi_scale: 0.0
+  deterministic: true
+  resume: false
+  pretrained: false
+  freeze: null
+  fraction: 1.0
+  val: true
+  split: val
+  conf: 0.001
+  iou: 0.7
+  max_det: 300
+  agnostic_nms: false
+  single_cls: false
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 0.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0
+  close_mosaic: 0
+  erasing: 0.0
+  auto_augment: null
+  dropout: 0.0
+  box: 7.5
+  cls: 0.5
+  dfl: 1.5
+  save: true
+  save_period: -1
+  plots: false
+  verbose: false
+  compile: false
+evaluation:
+  split: val
+  test_locked: true
+  imgsz: 960
+  prediction_conf: 0.001
+  operating_conf: 0.25
+  matching_iou: 0.5
+  nms_iou: 0.7
+  max_det: 300
+  batch: 1
+  rect: false
+  augment: false
+  half: false
+  agnostic_nms: false
+  AP_iou_thresholds:
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+  - 0.85
+  - 0.9
+  - 0.95
+  size_definitions:
+    Tiny: area<1024
+    Small: 1024<=area<9216
+    Medium: 9216<=area<65536
+    Large: area>=65536
+  size_units: GT box area in original image pixels, not resized network-input pixels
+  evaluator: python -m drone_detection paper evaluate
+negative_mode: random
+negative_count: 512
+negative_bundle: 04_experiments/paper_v1/negative_pool/matched_bundle.json
+output_root: 04_experiments/paper_v1/E2

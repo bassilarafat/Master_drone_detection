@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "dataset_name": "DUT_Anti_UAV_Clean_v1",
+  "dataset_relative_path": "02_datasets/DUT_Anti_UAV_Clean_v1",
+  "training_allowed": false,
+  "issued_date": "2026-11-09",
+  "reason": "Gate 2 confirmed cross-split scene overlap. The user explicitly prohibits training on Clean_v1 and requires retaining it unchanged while constructing scene-disjoint Clean_v2.",
+  "evidence": "06_results/Gate2_scene_sequence_audit_v1_20261109/report.json",
+  "documentation": "docs/scene_sequence_audit.md"
+}

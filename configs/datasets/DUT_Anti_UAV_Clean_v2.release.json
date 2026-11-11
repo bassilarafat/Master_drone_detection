@@ -1,0 +1,48 @@
+{
+  "dataset_name": "DUT_Anti_UAV_Clean_v2",
+  "created_at_utc": "2026-11-10T11:02:23.632154+00:00",
+  "manifest_sha256": "ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+  "freeze_sha256": "9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058",
+  "files": 19010,
+  "counts": {
+    "train": {
+      "images": 6299,
+      "objects": 6317,
+      "negative_images": 1,
+      "tiny": 3344,
+      "small": 2082,
+      "medium": 671,
+      "large": 220
+    },
+    "val": {
+      "images": 1827,
+      "objects": 1867,
+      "negative_images": 0,
+      "tiny": 715,
+      "small": 765,
+      "medium": 289,
+      "large": 98
+    },
+    "test": {
+      "images": 1325,
+      "objects": 1377,
+      "negative_images": 0,
+      "tiny": 577,
+      "small": 544,
+      "medium": 192,
+      "large": 64
+    }
+  },
+  "source_dataset_sha256": "d2225406e2ce663121d878552ccadd63593c49ffb9a3c90ad0251d2ba805b408",
+  "scientific_limits": [
+    "Scene-group-disjoint under the declared retrieval, geometric verification and review protocol; not sequence-disjoint.",
+    "Original recording IDs, capture timestamps and original video frame counters remain unresolved.",
+    "Visual retrieval is not a proof that every possible scene relationship has been recovered.",
+    "Annotations inherit the frozen Clean_v1 state; no boxes are invented or edited during resplitting.",
+    "Historical project checkpoints may have seen images now assigned to Test; they must not initialize final paper experiments."
+  ],
+  "scene_groups": 1571,
+  "allocation_blocks": 313,
+  "gate2_status": "PASS",
+  "test_modified_after_release": false
+}

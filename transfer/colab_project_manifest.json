@@ -1,0 +1,30 @@
+{
+  "status": "TRANSFER_READY_NOT_UPLOADED",
+  "reason": "No Google Drive mount was detected on the local Windows machine.",
+  "target": "MyDrive/Master_Drone_Detection",
+  "copy_method": "Copy the repository while preserving relative paths; include the listed paths and the frozen Clean_v2 release.",
+  "include": [
+    "src",
+    "configs",
+    "docs",
+    "scripts",
+    "tests",
+    "notebooks/YOLO26_E0_Seed17_Colab.ipynb",
+    "pyproject.toml",
+    "requirements.txt",
+    "02_datasets/DUT_Anti_UAV_Clean_v2",
+    "05_models/pretrained/paper/yolo26s.pt",
+    "06_results/paper_yolo26/preflight.json",
+    "configs/datasets/DUT_Anti_UAV_Clean_v2.release.json"
+  ],
+  "exclude": [
+    ".git",
+    ".venv",
+    "__pycache__",
+    ".pytest_cache",
+    "runs",
+    "04_experiments/**/weights",
+    "old giant temporary outputs"
+  ],
+  "not_uploaded": true
+}
