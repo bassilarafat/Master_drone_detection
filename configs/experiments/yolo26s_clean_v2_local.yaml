@@ -1,0 +1,28 @@
+# Local RTX 5050 Laptop: 8 GB VRAM, 16 GB system RAM.
+# Independent local baseline; does not change the locked paper protocol.
+name: YOLO26s_Clean_v2_local_seed17
+model: notebooks/yolo26s.pt
+data: 02_datasets/DUT_Anti_UAV_Clean_v2/data.yaml
+project: 04_experiments/local_clean_v2
+train:
+  epochs: 100
+  imgsz: 960
+  # Measured ~27.5 images/s at 960; 4 workers offered no improvement.
+  batch: 8
+  device: "0"
+  workers: 2
+  cache: false
+  amp: true
+  seed: 17
+  deterministic: true
+  patience: 30
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  cos_lr: true
+  warmup_epochs: 3
+  close_mosaic: 10
+  save: true
+  save_period: 10
+  val: true
+  plots: true

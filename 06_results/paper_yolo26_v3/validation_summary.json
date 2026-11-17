@@ -1,0 +1,114 @@
+{
+  "status": "SEALED_PREFLIGHT_PASS",
+  "updated_at_utc": "2026-11-16T21:27:18.274129+00:00",
+  "configuration_sha256": "183ce28af7b93aaa7c7d4b036050966ece520d83603e2ca3234dad7353bcda8e",
+  "protocol_sha256": "0842b17cf6a95841f63fe2205ec2a510d1b32848cd4a5d3ef09c888faf382232",
+  "seal_created": true,
+  "sealed_at_utc": "2026-11-16T21:25:35.367474+00:00",
+  "official_training_started": false,
+  "cpu_tests": 12,
+  "cpu_tests_passed": true,
+  "preflight_checks": {
+    "dataset_integrity_before": true,
+    "E0_batch4_amp_resume": true,
+    "E1_batch4_amp_resume": true,
+    "test_guard": true,
+    "dataset_integrity_after": true,
+    "initialization": true,
+    "checkpoint_save_reload": true,
+    "simulated_resume": true,
+    "corrupt_fallback": true,
+    "protocol_mismatch_rejected": true
+  },
+  "preflight_details": {
+    "E0": {
+      "strides": [
+        8,
+        16,
+        32
+      ],
+      "initialized_backbone_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "peak_gpu_bytes": 2838132224,
+      "first_epochs": [
+        1
+      ],
+      "resumed_epochs": [
+        2
+      ],
+      "checkpoint_reloaded": true,
+      "optimizer_state_restored": true,
+      "scaler_state_restored": true,
+      "scheduler_state_restored": true,
+      "corrupted_canonical_fallback": true,
+      "validation_evaluator_invoked": true,
+      "finite_model": true,
+      "result_scope": "Fixed Train/Val execution subset only; no research performance inference"
+    },
+    "E1": {
+      "strides": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "initialized_backbone_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "peak_gpu_bytes": 4188804608,
+      "first_epochs": [
+        1
+      ],
+      "resumed_epochs": [
+        2
+      ],
+      "checkpoint_reloaded": true,
+      "optimizer_state_restored": true,
+      "scaler_state_restored": true,
+      "scheduler_state_restored": true,
+      "corrupted_canonical_fallback": true,
+      "validation_evaluator_invoked": true,
+      "finite_model": true,
+      "result_scope": "Fixed Train/Val execution subset only; no research performance inference"
+    }
+  },
+  "numerical_checkpoint_audit": {
+    "E0": {
+      "checkpoint_directory": "06_results\\paper_yolo26_v3\\attempt_20261116T211849209289\\synthetic_E0\\run\\weights",
+      "epochs": [
+        {
+          "completed_epoch": 1,
+          "actual_optimizer_steps": 24,
+          "scaler_scale": 256.0
+        },
+        {
+          "completed_epoch": 2,
+          "actual_optimizer_steps": 56,
+          "scaler_scale": 256.0
+        }
+      ],
+      "finite_live_model": true,
+      "finite_ema": true,
+      "finite_optimizer": true,
+      "note": "GradScaler initial overflow/skipped updates occurred; successful updates and finite saved states verified after calibration. No claim of zero initial scaled-gradient overflow."
+    },
+    "E1": {
+      "checkpoint_directory": "06_results\\paper_yolo26_v3\\attempt_20261116T211849209289\\synthetic_E1\\run\\weights",
+      "epochs": [
+        {
+          "completed_epoch": 1,
+          "actual_optimizer_steps": 22,
+          "scaler_scale": 64.0
+        },
+        {
+          "completed_epoch": 2,
+          "actual_optimizer_steps": 54,
+          "scaler_scale": 64.0
+        }
+      ],
+      "finite_live_model": true,
+      "finite_ema": true,
+      "finite_optimizer": true,
+      "note": "GradScaler initial overflow/skipped updates occurred; successful updates and finite saved states verified after calibration. No claim of zero initial scaled-gradient overflow."
+    }
+  },
+  "test_inference_performed": false,
+  "official_run_directory_exists": false
+}

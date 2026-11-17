@@ -1,0 +1,23 @@
+# Matches 04_experiments/YOLO26s_baseline-5/args.yaml except for Clean_v2 data.
+name: YOLO26s_Clean_v2_standard_seed42
+model: notebooks/yolo26s.pt
+data: 02_datasets/DUT_Anti_UAV_Clean_v2/data.yaml
+project: 04_experiments/clean_v2_standard_protocol
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 4
+  device: "0"
+  workers: 2
+  cache: false
+  amp: true
+  seed: 42
+  deterministic: true
+  patience: 100
+  optimizer: auto
+  cos_lr: false
+  close_mosaic: 10
+  save: true
+  save_period: -1
+  val: true
+  plots: true

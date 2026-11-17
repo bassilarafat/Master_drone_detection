@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "plan_id": "DUT_Clean_v2_YOLO26_approved_analysis_v1",
+  "approved_date": "2026-11-16",
+  "approval_source": "Researcher explicitly adopted this sequence and reporting plan in the conversation",
+  "scope": "Approved analysis and decision rules; executable training readiness is separate",
+  "analysis_status": "frozen_by_companion_sha256_record",
+  "executable_status": "not_fully_frozen_or_ready",
+  "base_protocol": "configs/paper/protocol_yolo26.json",
+  "dataset_release_record": "configs/datasets/DUT_Anti_UAV_Clean_v2.release.json",
+  "arms": {
+    "E0": "YOLO26s baseline, public shared-backbone initialization",
+    "E1": "YOLO26s-P2, matched public shared-backbone initialization",
+    "E2": "E1 architecture plus 512 verified, source-matched random background crops",
+    "E3": "E1 architecture plus 512 verified, source-matched model-guided hard background crops"
+  },
+  "seeds": [17, 42, 123],
+  "seed_policy": {
+    "complete_all_planned_seeds_irrespective_of_performance": true,
+    "seed17_role": "Technical sanity and protocol-compliance review; not an efficacy gate",
+    "no_seed_selection_or_substitution_based_on_scores": true,
+    "technical_failures": "Preserve the failed attempt, record the defect and prospective repair; technical correctness may gate execution, disappointing valid performance may not",
+    "missing_runs": "Report missing or failed runs explicitly; do not fabricate, impute, or silently omit seed results"
+  },
+  "sequence": [
+    "Finish and freeze executable controls before controlled training",
+    "E0 seed 17",
+    "E1 seed 17",
+    "Review architecture, initialization, dataloader, training logs, validation evaluator and no-Test compliance",
+    "E0 seeds 42 and 123, and E1 seeds 42 and 123, regardless of score direction",
+    "Prepare and independently verify matched Train-only negative bundles",
+    "E2 seeds 17, 42 and 123",
+    "E3 seeds 17, 42 and 123"
+  ],
+  "comparisons": {
+    "architecture": {
+      "contrast": "E1 minus E0, paired by training seed",
+      "meaning": "Effect of the declared whole P2 architecture variant under matched controls"
+    },
+    "primary_negative_selection": {
+      "contrast": "E3 minus E2, paired by training seed",
+      "meaning": "Effect of the negative-location selection procedure with matched negative sample count, source frequencies, crop size and training/update schedule"
+    },
+    "secondary_random_augmentation": {
+      "contrast": "E2 minus E1, paired by training seed",
+      "meaning": "Overall effect of adding random background crops; added data and update budget may differ from E1"
+    },
+    "secondary_hard_augmentation": {
+      "contrast": "E3 minus E1, paired by training seed",
+      "meaning": "Overall hard-negative augmentation effect; does not isolate hardness from added examples or updates"
+    }
+  },
+  "negative_control_matching": {
+    "negative_samples_per_arm": 512,
+    "eligible_source_partition": "Current frozen Clean_v2 Train only",
+    "required_equalities": [
+      "positive-image set and annotations",
+      "negative sample count",
+      "crop dimensions",
+      "source-image identity frequencies",
+      "epochs, batch and accumulation policies",
+      "actual optimizer-update budget",
+      "initialization and corresponding seed",
+      "augmentation and learning-rate schedule"
+    ],
+    "review": "Every selected negative must be independently verified UAV-free, including context; annotation absence is insufficient",
+    "initialization": "Train each E2/E3 arm from the matched public initialization; E1 proposes candidates, not the starting fine-tuned checkpoint",
+    "bundle_identity": "Freeze the matched crop manifests and hashes before E2/E3; retain a fixed bundle across training seeds",
+    "implementation_status": "Pending YOLO26 integration and bundle verification; no negative-pool results claimed"
+  },
+  "evaluation_policy": {
+    "development_partition": "Validation only",
+    "clean_v2_test_use_for_new_decisions": false,
+    "clean_v2_test_history": "Already evaluated in the saved descriptive matrix; never relabel as an untouched holdout",
+    "model_selection_data": "Validation only",
+    "exact_checkpoint_selection_rule": "Must be prospectively specified in the executable freeze; existing runner uses last.pt and must not be silently changed to best.pt",
+    "external_confirmation": "Separate independent benchmark with a fully specified, sealed protocol before final inference",
+    "sampled_rgpt": "Preliminary external validation only; do not relabel an exposed sample as untouched final confirmation"
+  },
+  "reporting": {
+    "per_seed": true,
+    "mean": "Arithmetic mean over all three prespecified seeds",
+    "sample_standard_deviation": "sqrt(sum((x_s - mean(x))^2)/(n-1)); n=3, ddof=1",
+    "paired_differences": "Report all three same-seed contrasts, their arithmetic mean and sample SD",
+    "metrics": ["AP50", "AP50:95", "precision", "recall", "Tiny recall", "Small recall", "TP", "FP", "FN"],
+    "units": "State fraction versus percent, and percentage-point units for differences; keep count differences as counts",
+    "latency": "Report only from a separately fixed and measured hardware/runtime/precision/batch/measurement protocol",
+    "uncertainty": "Seed SD measures training variability, not frame/video sampling uncertainty or proof of significance",
+    "external_confidence_intervals": "Prespecify the statistical unit and method in the external protocol; do not treat correlated frames as independent observations"
+  },
+  "result_status": {
+    "local_adamw_run": "Completed descriptive local baseline; not Controlled E0",
+    "historical_p2": "Historical pilot; motivation only",
+    "controlled_e0_e3": "No new completed controlled results supplied or created by this plan",
+    "external": "No final external scores supplied or created by this plan"
+  },
+  "amendments": "Do not edit this sealed version after outcomes; create a new version with timestamp, reason, changes and prior hash. Preserve failed attempts and outcome exposure history."
+}

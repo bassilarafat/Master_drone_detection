@@ -1,0 +1,152 @@
+dataset:
+  path: 02_datasets/DUT_Anti_UAV_Clean_v2
+  release_id: DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5
+  manifest_sha256: ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5
+  freeze_sha256: 9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058
+  release_record: configs/datasets/DUT_Anti_UAV_Clean_v2.release.json
+  release_record_sha256: 4b923ae230a4dd80b62f51b9cf2e4bc98bcb2b430392a84eaaa5513e484755a5
+initialization:
+  path: 05_models/pretrained/paper/yolo26s.pt
+  sha256: 646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b
+  source_url: https://huggingface.co/Ultralytics/YOLO26/resolve/main/yolo26s.pt
+  policy: Transfer only shared backbone modules 0..10 inclusive; initialize neck and
+    heads from the same run seed.
+  backbone_last_module_exclusive: 11
+  classes: 80
+  class_zero: person
+seeds:
+- 17
+- 42
+- 123
+default_seed: 17
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 1
+  nbs: 16
+  optimizer: MuSGD
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  cos_lr: true
+  warmup_epochs: 0.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  patience: 0
+  device: '0'
+  workers: 0
+  amp: false
+  cache: false
+  rect: false
+  multi_scale: 0.0
+  deterministic: true
+  resume: false
+  pretrained: false
+  freeze: null
+  fraction: 1.0
+  val: true
+  split: val
+  conf: 0.001
+  iou: 0.7
+  max_det: 300
+  agnostic_nms: false
+  single_cls: false
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 0.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0
+  close_mosaic: 0
+  erasing: 0.0
+  auto_augment: null
+  dropout: 0.0
+  box: 7.5
+  cls: 0.5
+  dfl: 1.5
+  save: true
+  save_period: -1
+  plots: false
+  verbose: true
+  compile: false
+  nms: true
+  channels_last: false
+  time: null
+  cls_remap: false
+  profile: false
+  save_json: false
+  quantize: null
+  classes: null
+  distill_model: null
+  cls_pw: 0.0
+  bgr: 0.0
+evaluation:
+  split: val
+  test_locked: true
+  imgsz: 960
+  prediction_conf: 0.001
+  operating_conf: 0.25
+  matching_iou: 0.5
+  nms_iou: 0.7
+  max_det: 300
+  batch: 1
+  rect: false
+  augment: false
+  agnostic_nms: false
+  AP_iou_thresholds:
+  - 0.5
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.7
+  - 0.75
+  - 0.8
+  - 0.85
+  - 0.9
+  - 0.95
+  size_definitions:
+    Tiny: area<1024
+    Small: 1024<=area<9216
+    Medium: 9216<=area<65536
+    Large: area>=65536
+  size_units: GT box area in original image pixels, not resized network-input pixels
+  nms: true
+  quantize: 32
+  effective_end2end: false
+  nms_free: false
+  device: '0'
+  evaluator: drone_detection.paper_metrics.export_metrics
+  AP_definition: 101-point precision envelope; .50:.05:.95; one-to-one score-ordered
+    matching; maxDet300; not full COCO crowd/area-ignore evaluation
+checkpoint:
+  filename: last.pt
+  epoch: 100
+  selection: Epoch100 last.pt in every arm/seed; no best.pt selection
+  validation_selection_scope: All future model/threshold choices use Validation only;
+    never Clean_v2 Test
+schema_version: 2
+experiment_id: E0_Y26
+architecture: E0
+protocol: configs/paper/protocol_yolo26_v2.json
+protocol_sha256: 0842b17cf6a95841f63fe2205ec2a510d1b32848cd4a5d3ef09c888faf382232
+model:
+  path: configs/paper/yolo26s-paper.yaml
+  sha256: 24b6925090d73b76224ae873b6511417e5b04ad80b5ead0bbef9babb04c888f5
+  source_sha256: b1d1fa0c69eced64f9939536038bd8d697c32e72200b34187a767de431af7ef0
+  source_path: ultralytics/cfg/models/26/yolo26.yaml
+  outputs:
+  - 8
+  - 16
+  - 32
+negative_mode: none
+negative_count: 0
+output_root: 04_experiments/controlled_yolo26_v2/E0_Y26

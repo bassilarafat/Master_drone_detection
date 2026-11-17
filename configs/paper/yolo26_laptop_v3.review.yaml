@@ -1,0 +1,112 @@
+schema_version: 3
+status: DRAFT_FOR_RESEARCHER_REVIEW_NOT_BENCHMARKED
+version: controlled_yolo26_laptop_v3
+base_protocol:
+  path: configs/paper/protocol_yolo26_v2.json
+  sha256: 0842b17cf6a95841f63fe2205ec2a510d1b32848cd4a5d3ef09c888faf382232
+seeds:
+- 17
+- 42
+- 123
+train:
+  epochs: 100
+  imgsz: 960
+  batch: 4
+  nbs: 16
+  optimizer: MuSGD
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  cos_lr: true
+  warmup_epochs: 0.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  patience: 0
+  device: '0'
+  workers: 2
+  amp: true
+  cache: false
+  rect: false
+  multi_scale: 0.0
+  deterministic: true
+  resume: false
+  pretrained: false
+  freeze: null
+  fraction: 1.0
+  val: true
+  split: val
+  conf: 0.001
+  iou: 0.7
+  max_det: 300
+  agnostic_nms: false
+  single_cls: false
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  fliplr: 0.5
+  flipud: 0.0
+  mosaic: 0.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0
+  close_mosaic: 0
+  erasing: 0.0
+  auto_augment: null
+  dropout: 0.0
+  box: 7.5
+  cls: 0.5
+  dfl: 1.5
+  save: true
+  save_period: 1
+  plots: false
+  verbose: true
+  compile: false
+  nms: true
+  channels_last: false
+  time: null
+  cls_remap: false
+  profile: false
+  save_json: false
+  quantize: null
+  classes: null
+  distill_model: null
+  cls_pw: 0.0
+  bgr: 0.0
+output_root: 04_experiments/controlled_yolo26_v3
+checkpoint_policy:
+  final: last.pt epoch100
+  save: every completed epoch
+  resume: same arm, seed, configuration and verified checkpoint only
+  power_loss: resume from last intact completed epoch; incomplete epoch repeats
+  exact_equivalence: Interrupted training is recorded separately; bitwise equivalence
+    to uninterrupted training is not claimed
+requirements_before_launch:
+- Researcher reviews the files
+- Validate batch4/AMP on both E0 and E1 without using Test or outcome-based selection
+- Seal the reviewed configuration and implementation before starting
+test_inference_allowed: false
+automatic_followup: false
+initialization:
+  mode: pinned_public_backbone_transfer
+  donor: 05_models/pretrained/paper/yolo26s.pt
+  donor_sha256: 646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b
+  publisher_commit: 45588070f19053475015dd860367c7780dd34b2a
+  transfer_scope: backbone_modules_0_to_10
+  transferred_tensors: 240
+  source_backbone_sha256: b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3
+  neck_and_heads: seed_initialized
+  full_network_pretrained: false
+environment:
+  python: '3.11'
+  pytorch: 2.11.0+cu128
+  ultralytics: 8.4.157
+  gpu: NVIDIA GeForce RTX 5050 Laptop GPU
+reproducibility:
+  deterministic: true
+  bitwise_reproducibility_claimed: false

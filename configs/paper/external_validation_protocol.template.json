@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "protocol_id": "TO_BE_PROVIDED",
+  "status": "template_incomplete_not_frozen",
+  "final_inference_permitted_by_this_template": false,
+  "dataset": {
+    "name": null,
+    "version_or_release": null,
+    "source_url": null,
+    "license_and_provenance_record": null,
+    "requested_channel": "RGB/visible",
+    "verified_channel": null,
+    "source_manifest_path": null,
+    "source_manifest_sha256": null,
+    "overlap_and_duplicate_audit_against_training": null,
+    "native_recording_or_video_identifiers_verified": null
+  },
+  "evaluation_population": {
+    "included_videos_or_samples_manifest": null,
+    "included_manifest_sha256": null,
+    "inclusion_rules": null,
+    "exclusion_rules": null,
+    "frame_sampling_policy_or_explicit_all_frames_rule": null,
+    "frame_selection_seed_if_applicable": null,
+    "sample_counts_and_coverage": null,
+    "occlusion_absence_and_ignored_annotation_policy": null
+  },
+  "exposure_history": {
+    "any_results_or_samples_previously_inspected": null,
+    "previous_model_development_use": null,
+    "relationship_to_preliminary_sampled_rgpt_evaluation": null,
+    "justification_for_independent_final_confirmation": null
+  },
+  "model_selection": {
+    "allowed_selection_partition": "Validation only",
+    "architecture_and_arm_selection_rule": null,
+    "checkpoint_selection_rule_and_tie_break": null,
+    "selected_experiment_ids_and_training_seeds": null,
+    "checkpoint_manifest_with_exact_sha256_values": null,
+    "no_selection_or_threshold_tuning_using_external_scores": true
+  },
+  "inference": {
+    "image_size_and_letterbox_policy": null,
+    "batch_size": null,
+    "precision": null,
+    "head_selection_and_nms_or_nms_free_path": null,
+    "ap_prediction_confidence_floor": null,
+    "operating_confidence_threshold": null,
+    "nms_iou_if_applicable": null,
+    "max_detections": null,
+    "test_time_augmentation_policy": null,
+    "resolved_config_artifact_and_sha256": null,
+    "software_environment_and_evaluator_identity": null
+  },
+  "metrics_and_aggregation": {
+    "primary_metric": null,
+    "secondary_metrics": null,
+    "matching_and_ap_definition": null,
+    "size_bin_and_coordinate_convention": null,
+    "per_video_reporting": null,
+    "aggregate_rule_pooled_vs_macro": null,
+    "background_false_alarm_unit_and_denominator": null,
+    "confidence_interval_statistical_unit": null,
+    "confidence_interval_method_and_level": null,
+    "resampling_seed_and_repetitions_if_applicable": null,
+    "paired_model_comparison_rule": null,
+    "recording_group_manifest_if_frames_are_correlated": null
+  },
+  "execution_and_preservation": {
+    "predictions_and_no_detection_images_preserved": true,
+    "planned_output_location": null,
+    "missing_or_failed_sample_policy": null,
+    "freeze_timestamp_before_final_inference": null,
+    "complete_protocol_and_input_manifest_lock": null,
+    "amendment_rule": "After outcome exposure preserve this version and original results. Record any amendment in a new version with rationale and exposure history; do not present a post-outcome amendment as prospective."
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "protocol_path": "configs/paper/protocol_yolo26_v2.json",
+  "sealed_at_utc": "2026-11-16T19:00:28.702510+00:00",
+  "scope": "Prospective controlled YOLO26 E0/E1 execution identities; no result or external-benchmark freeze",
+  "artifacts": [
+    {
+      "path": "configs/paper/protocol_yolo26_v2.json",
+      "sha256": "0842b17cf6a95841f63fe2205ec2a510d1b32848cd4a5d3ef09c888faf382232"
+    },
+    {
+      "path": "configs/paper/E0_Y26_v2.yaml",
+      "sha256": "b839dfceb83bd1f311b226e05a2e0e8f4f27bbbd94bdf0a808c61925c3917823"
+    },
+    {
+      "path": "configs/paper/E1_Y26_P2_v2.yaml",
+      "sha256": "9301f99cdf62be8882dcff7cee9db83323b621ff160339d9e07772ee0e5e814d"
+    },
+    {
+      "path": "src/drone_detection/yolo26_controls.py",
+      "sha256": "8e2b6393c5946e0c0ec1bc92e4f58e6894ef7f5633f20816951a64ebec053cee"
+    },
+    {
+      "path": "src/drone_detection/yolo26_controlled.py",
+      "sha256": "d18f1c8d1cbefccb60c1ee39277059570e9d9232f400cea63607f81b405cf37d"
+    },
+    {
+      "path": "src/drone_detection/paper_runner.py",
+      "sha256": "14b097e39eae4d6bb9d2cb481298e024fc5c92af229af251b8c4bcfa27d48af4"
+    },
+    {
+      "path": "src/drone_detection/paper_common.py",
+      "sha256": "037b19a9eed5f18899be4d61705bb13aeef269530b18b4beecd668fb00b3f4c7"
+    },
+    {
+      "path": "src/drone_detection/paper_metrics.py",
+      "sha256": "9041288b53f7b7a2d2a54bfd7f6ac15ab9594f1b58833f06b6a721f7d0e08ca9"
+    },
+    {
+      "path": "src/drone_detection/training.py",
+      "sha256": "44102b8d4b049eb31fe8ee6977df52c89008ee90d8da6c3416aa555456ce74f6"
+    },
+    {
+      "path": "src/drone_detection/dataset_snapshot.py",
+      "sha256": "8b461f0b52053fb0de4515c29d18a864964b87b859f5df7f2b7711087fff5ac3"
+    },
+    {
+      "path": "src/drone_detection/paths.py",
+      "sha256": "49cc3b154052f2346ed62bdd8c5659a06127d2c7ff5ddebab7f57f1c11c9a68f"
+    },
+    {
+      "path": "src/drone_detection/data_audit.py",
+      "sha256": "4add1bda480be668b8090f3e514377742d21f6666da0de2d97c9e249643c2efd"
+    },
+    {
+      "path": "src/drone_detection/metrics.py",
+      "sha256": "6e85ce0f22345b736d91e54b94adc7b2a44c94dbef48d55b5daf17810428bffb"
+    },
+    {
+      "path": "src/drone_detection/models/__init__.py",
+      "sha256": "c1e9ae6ea07f8e048e6ad375c677e79319f6bb06e8e0283e9ae882a773bd0a34"
+    },
+    {
+      "path": "src/drone_detection/models/attention.py",
+      "sha256": "5fd65bb74655ed17801cd456785caf2a99d878bef866df1154daeaef6aaefb90"
+    },
+    {
+      "path": "src/drone_detection/models/loader.py",
+      "sha256": "9855fb4ff72bc81ab47f004c4bd1d086302639175d64432b0f1b18dfafcf3a6f"
+    },
+    {
+      "path": "scripts/start_controlled_yolo26.ps1",
+      "sha256": "85a9d7d9f70f2c42351078bdc0b6abb18147a9dc6a0be6e8603176b1102ebb80"
+    },
+    {
+      "path": "scripts/preflight_yolo26_controlled.py",
+      "sha256": "ecca5cc5d5089faeff4e0456ff6347d1b9564713ac604df06ffb8867c1e3fe55"
+    },
+    {
+      "path": "tests/test_yolo26_controlled.py",
+      "sha256": "46588ed37959156caf5531d1d72fbebe348bfd32cda58678a1c5f287c5f5b3f6"
+    },
+    {
+      "path": "tests/test_paper_cache_guard.py",
+      "sha256": "6a871df578c36883a02b5f5185d371c0edce9a096b704fb8dad22dda8a72f369"
+    },
+    {
+      "path": "tests/test_paper_metrics.py",
+      "sha256": "b55cbd03c4cb64d4492c24d4cf4513087220c876977a372e336cb59f9f43a4dc"
+    },
+    {
+      "path": "06_results/paper_yolo26_v2/synthetic_preflight.json",
+      "sha256": "1d0fda96c2654c0baa04dd5c76de059729a477c3d2b07e052057c310014a7038"
+    }
+  ],
+  "test_locked": true,
+  "change_policy": "Preserve this version and record a prospective new protocol/lock for any change; never silently reseal after outcomes."
+}

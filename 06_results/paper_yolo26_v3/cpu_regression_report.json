@@ -1,0 +1,11 @@
+{
+  "tests": 12,
+  "success": true,
+  "failures": 0,
+  "errors": 0,
+  "patterns": [
+    "test_controlled_recovery.py",
+    "test_yolo26_laptop.py",
+    "test_yolo26_validation.py"
+  ]
+}

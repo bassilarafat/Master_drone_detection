@@ -43,6 +43,12 @@ logs/
 
 # Results generated automatically
 06_results/temp/
+06_results/EXP004_targeted/mining_train/candidates/
+06_results/EXP004_targeted/dry_run_data/images/
+06_results/EXP004_targeted/dry_run_data/labels/
+06_results/EXP004_targeted/experiment/
+06_results/EXP004_targeted/prepared_data/
+06_results/YOLO26*_fp_review_*/review/
 06_results/heatmaps/*
 # Keep the initial four-image comparison as versioned reference results.
 !06_results/heatmaps/baseline_vs_p2/
@@ -50,3 +56,18 @@ logs/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local training, manuscript and downloaded publication artifacts.
+*.log
+04_experiments/
+08_thesis/
+09_papers/*.pdf
+
+# Keep the compact sealed preflight evidence, not its execution fixtures.
+06_results/paper_yolo26_v2/*
+!06_results/paper_yolo26_v2/synthetic_preflight.json
+06_results/paper_yolo26_v3/*
+!06_results/paper_yolo26_v3/hardware_preflight.json
+!06_results/paper_yolo26_v3/numerical_checkpoint_audit.json
+!06_results/paper_yolo26_v3/cpu_regression_report.json
+!06_results/paper_yolo26_v3/validation_summary.json

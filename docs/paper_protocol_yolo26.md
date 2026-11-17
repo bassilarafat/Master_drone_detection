@@ -1,5 +1,12 @@
 # YOLO26 paper protocol: Clean_v2, E0--E3
 
+Approved analysis and decision rules dated 16 November 2026 are recorded in
+[the controlled-study supplement](CONTROLLED_STUDY_DECISION_20261116.md).
+They fix all three seeds irrespective of results, primary E3--E2, Validation-only
+development and prospective external confirmation. That supplement also records
+the remaining executable-readiness gaps; it does not change this file's older
+preflight state into a completed execution freeze.
+
 Status: **preflight only**. No YOLO26 training or Test evaluation is authorized
 by this revision. The YOLOv8 protocol remains unchanged and is historical
 context; these experiments use the immutable `DUT_Anti_UAV_Clean_v2` release.

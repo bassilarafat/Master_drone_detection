@@ -1,0 +1,40 @@
+{
+  "E0": {
+    "checkpoint_directory": "06_results\\paper_yolo26_v3\\attempt_20261116T211849209289\\synthetic_E0\\run\\weights",
+    "epochs": [
+      {
+        "completed_epoch": 1,
+        "actual_optimizer_steps": 24,
+        "scaler_scale": 256.0
+      },
+      {
+        "completed_epoch": 2,
+        "actual_optimizer_steps": 56,
+        "scaler_scale": 256.0
+      }
+    ],
+    "finite_live_model": true,
+    "finite_ema": true,
+    "finite_optimizer": true,
+    "note": "GradScaler initial overflow/skipped updates occurred; successful updates and finite saved states verified after calibration. No claim of zero initial scaled-gradient overflow."
+  },
+  "E1": {
+    "checkpoint_directory": "06_results\\paper_yolo26_v3\\attempt_20261116T211849209289\\synthetic_E1\\run\\weights",
+    "epochs": [
+      {
+        "completed_epoch": 1,
+        "actual_optimizer_steps": 22,
+        "scaler_scale": 64.0
+      },
+      {
+        "completed_epoch": 2,
+        "actual_optimizer_steps": 54,
+        "scaler_scale": 64.0
+      }
+    ],
+    "finite_live_model": true,
+    "finite_ema": true,
+    "finite_optimizer": true,
+    "note": "GradScaler initial overflow/skipped updates occurred; successful updates and finite saved states verified after calibration. No claim of zero initial scaled-gradient overflow."
+  }
+}

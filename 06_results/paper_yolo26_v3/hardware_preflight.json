@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "configuration_sha256": "183ce28af7b93aaa7c7d4b036050966ece520d83603e2ca3234dad7353bcda8e",
+  "arms": [
+    "E0",
+    "E1"
+  ],
+  "execution_only": true,
+  "official_training_started": false,
+  "test_inference_performed": false,
+  "checks": {
+    "dataset_integrity_before": true,
+    "E0_batch4_amp_resume": true,
+    "E1_batch4_amp_resume": true,
+    "test_guard": true,
+    "dataset_integrity_after": true,
+    "initialization": true,
+    "checkpoint_save_reload": true,
+    "simulated_resume": true,
+    "corrupt_fallback": true,
+    "protocol_mismatch_rejected": true
+  },
+  "details": {
+    "E0": {
+      "strides": [
+        8,
+        16,
+        32
+      ],
+      "initialized_backbone_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "peak_gpu_bytes": 2838132224,
+      "first_epochs": [
+        1
+      ],
+      "resumed_epochs": [
+        2
+      ],
+      "checkpoint_reloaded": true,
+      "optimizer_state_restored": true,
+      "scaler_state_restored": true,
+      "scheduler_state_restored": true,
+      "corrupted_canonical_fallback": true,
+      "validation_evaluator_invoked": true,
+      "finite_model": true,
+      "result_scope": "Fixed Train/Val execution subset only; no research performance inference"
+    },
+    "E1": {
+      "strides": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "initialized_backbone_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "peak_gpu_bytes": 4188804608,
+      "first_epochs": [
+        1
+      ],
+      "resumed_epochs": [
+        2
+      ],
+      "checkpoint_reloaded": true,
+      "optimizer_state_restored": true,
+      "scaler_state_restored": true,
+      "scheduler_state_restored": true,
+      "corrupted_canonical_fallback": true,
+      "validation_evaluator_invoked": true,
+      "finite_model": true,
+      "result_scope": "Fixed Train/Val execution subset only; no research performance inference"
+    }
+  },
+  "implementation_sha256": {
+    "src/drone_detection/yolo26_workflow.py": "6295d2c42ed2de45452563fe0b001c02d5ddfa6a03c2f9baa8d7f46fa66e910d",
+    "src/drone_detection/yolo26_recovery.py": "a72078dd890f9d52892f1c8838ea13f1a3dd51d45249360dadc930b8ad22d3b2",
+    "src/drone_detection/yolo26_laptop.py": "55cccba5ffa07739636162886d6ef8022439e55b933043621a8d4bdb0a14e301",
+    "src/drone_detection/yolo26_validation.py": "54acec155d9d041f71ca755b4a300e582dfc2c906c4e82542d89d1c86b1f5df6",
+    "tools/preflight_controlled.py": "c7bbf8884d37e4fc4c62fadd2d1712496def62a5b21827a3bf2737eb8e76ab84"
+  },
+  "finished_at_utc": "2026-11-16T21:23:58.479984+00:00"
+}

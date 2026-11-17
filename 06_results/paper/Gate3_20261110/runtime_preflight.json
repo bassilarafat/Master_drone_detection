@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "dataset_release": {
+    "release_id": "DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "manifest_sha256": "ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "freeze_sha256": "9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058"
+  },
+  "images_checked": 9451,
+  "checks": {
+    "unsupported_exif_orientation": 0,
+    "image_dimension_below_10": 0,
+    "jpeg_missing_eoi": 0
+  },
+  "source_image_repairs_requested": false,
+  "source_files_written": 0,
+  "reason": "Ultralytics check_image can save repaired JPEGs; all source JPEG end markers and EXIF coordinate conventions must already be safe"
+}

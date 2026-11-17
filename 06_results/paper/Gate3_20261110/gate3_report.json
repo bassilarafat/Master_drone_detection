@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "created_at_utc": "2026-11-10T14:57:42.948146+00:00",
+  "dataset_release": {
+    "release_id": "DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "manifest_sha256": "ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "freeze_sha256": "9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058"
+  },
+  "checks": {
+    "missing_label": 0,
+    "orphan_labels": 0,
+    "malformed_annotation": 0,
+    "unreadable_label": 0,
+    "unreadable_image": 0,
+    "invalid_class": 0,
+    "invalid_normalized_coordinates": 0,
+    "zero_width_or_height": 0,
+    "boundary_violation": 0,
+    "duplicate_annotation": 0,
+    "duplicate_image_stems": 0,
+    "manifest_count_mismatch": 0,
+    "scene_metadata_mismatch": 0,
+    "scene_group_cross_split": 0,
+    "allocation_block_cross_split": 0,
+    "exact_image_sha_cross_split": 0,
+    "manifest_image_coverage_mismatch": 0,
+    "scene_coverage_mismatch": 0,
+    "cache_files": 0,
+    "writable_release_files": 0,
+    "files_changed_during_audit": 0,
+    "release_count_mismatch": 0
+  },
+  "counts": {
+    "train": {
+      "images": 6299,
+      "labels": 6299,
+      "objects": 6317,
+      "empty_labels": 1,
+      "Tiny": 3344,
+      "Small": 2082,
+      "Medium": 671,
+      "Large": 220
+    },
+    "val": {
+      "images": 1827,
+      "labels": 1827,
+      "objects": 1867,
+      "empty_labels": 0,
+      "Tiny": 715,
+      "Small": 765,
+      "Medium": 289,
+      "Large": 98
+    },
+    "test": {
+      "images": 1325,
+      "labels": 1325,
+      "objects": 1377,
+      "empty_labels": 0,
+      "Tiny": 577,
+      "Small": 544,
+      "Medium": 192,
+      "Large": 64
+    }
+  },
+  "scene_groups": 1571,
+  "allocation_blocks": 313,
+  "boundary_tolerance": "1E-9",
+  "rounding_excess_within_tolerance": 0,
+  "images_fully_decoded": 9451,
+  "sha256_verification": "All release payload files, before and after audit",
+  "frozen_dataset_writes": 0,
+  "model_loaded": false,
+  "training_performed": false,
+  "test_model_evaluation_performed": false,
+  "limitations": [
+    "Validation/Test contain no annotation-defined empty-label images: background-only FPR is undefined there.",
+    "The single empty Train label is not independently certified UAV-free by this structural audit.",
+    "Scene-disjoint under the declared Gate 2 protocol, not native sequence-disjoint.",
+    "Large conservative Train allocation block constrains object-size/split balance."
+  ]
+}

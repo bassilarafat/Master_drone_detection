@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "plan_id": "DUT_Clean_v2_YOLO26_approved_analysis_v1",
+  "sealed_at_utc": "2026-11-16T18:21:06.901718+00:00",
+  "scope": "Analysis/decision rules and reviewed reference identities. Not a complete executable protocol freeze or external-benchmark freeze.",
+  "analysis_plan_status": "sealed",
+  "executable_readiness": "incomplete",
+  "external_template_status": "template_incomplete_not_frozen",
+  "training_started_by_this_action": false,
+  "test_evaluated_by_this_action": false,
+  "artifacts": [
+    {
+      "path": "configs\\paper\\analysis_plan_yolo26_v1.json",
+      "bytes": 6088,
+      "sha256": "0731f74de372a69379a043f8273ee3cf2f1b8d48a34323433513790c70969e24"
+    },
+    {
+      "path": "docs/CONTROLLED_STUDY_DECISION_20261116.md",
+      "bytes": 6900,
+      "sha256": "195b77a8d07d684a6a17920044fc85ebc7372391ea2c13fb08c05f853259e6db"
+    },
+    {
+      "path": "configs/paper/protocol_yolo26.json",
+      "bytes": 3049,
+      "sha256": "eb741a73ba9bf5c1bd5a6210a28e272102b3ee44672d434146f0593ec8e27901"
+    },
+    {
+      "path": "configs/paper/E0_Y26.yaml",
+      "bytes": 475,
+      "sha256": "ce2f7bd8aa5e93380c57dc6c789525187b387d00e17fe73e49845a32c3cf668f"
+    },
+    {
+      "path": "configs/paper/E1_Y26_P2.yaml",
+      "bytes": 484,
+      "sha256": "c7a6803e90e8462abe9a6a7e0fbf48d34f430bf67c2c74edf9ab69c43e615e39"
+    },
+    {
+      "path": "configs/paper/yolo26s-paper.yaml",
+      "bytes": 1191,
+      "sha256": "24b6925090d73b76224ae873b6511417e5b04ad80b5ead0bbef9babb04c888f5"
+    },
+    {
+      "path": "configs/paper/yolo26s-p2-paper.yaml",
+      "bytes": 1408,
+      "sha256": "6ebc72da238348a5a6dfd1702b42e93deea9c2970bd28c292ec72d09dbe2671d"
+    },
+    {
+      "path": "configs/paper/environment.lock.json",
+      "bytes": 786,
+      "sha256": "0214e1faf644a2e349e7e77670695b01d89d625e04bbaf2a5377d96871ed44f9"
+    },
+    {
+      "path": "configs/datasets/DUT_Anti_UAV_Clean_v2.release.json",
+      "bytes": 1686,
+      "sha256": "4b923ae230a4dd80b62f51b9cf2e4bc98bcb2b430392a84eaaa5513e484755a5"
+    },
+    {
+      "path": "src/drone_detection/yolo26_runner.py",
+      "bytes": 7715,
+      "sha256": "03cd8be0ad9d11d99506a6647dc6e0ae9ee5ac040ef7e3851ee0b084286cddd8"
+    },
+    {
+      "path": "src/drone_detection/yolo26_preflight.py",
+      "bytes": 6900,
+      "sha256": "a9f02e3dae096ec6f4fa785c7477e4947bd677c0bde956b2b9395984774ae2c1"
+    },
+    {
+      "path": "src/drone_detection/paper_metrics.py",
+      "bytes": 8818,
+      "sha256": "9041288b53f7b7a2d2a54bfd7f6ac15ab9594f1b58833f06b6a721f7d0e08ca9"
+    }
+  ],
+  "change_policy": "Create a new version and preserve this lock; do not silently rewrite after outcomes."
+}
