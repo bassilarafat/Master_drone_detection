@@ -6,6 +6,7 @@
 > **Primary contribution** · Evaluation integrity through scene-group-aware dataset reconstruction  
 > **Secondary case study** · The whole YOLO26s high-resolution P2 variant  
 > **Controlled status** · Six of six runs evaluated and replayed. All three seed pairs complete. **Next dependency: a sufficient allocation-separated source and verified E2/E3 data.**
+> **Next executable study** · E0@1280 resolution control is prospectively defined. The synthetic AMP loss/backward preflight passed with only 50.2 MB allocated-memory margin, so training remains unauthorized pending a real optimizer-state preflight and lock.
 
 ## Controlled study · Clean_v2 Validation
 
@@ -35,6 +36,7 @@
 | A · Dataset integrity | Can historical splitting expose related scenes? | ✅ Release and audits complete | A01–A14 and the old-boundary analysis. A15 split-effect experiment is planned. A16 points to branch F. |
 | B · Historical and exploratory detectors | What did earlier models and error analyses show? | ⚪ Historical / 🟠 exploratory | Original YOLOv8, P2, YOLO26, GAM, EXP004 preparation, old Test and four-cell evaluations. |
 | C · Controlled P2 | What changes when the declared P2 variant replaces the baseline? | ✅ Six runs and three pairs verified | All endpoint metrics and exported rows reproduced. Next dependency is the E2/E3 discovery design and verified matched negatives. |
+| C2 · E0 resolution control | Can E0@1280 match P2@960 on Tiny recall at lower or higher practical cost? | 🔵 Prospective · preflight only | E0@1280 protocol: seeds 17/42/123, 100 epochs, batch 4, accumulation 4, `last.pt`, Validation-only. [Preflight](/D:/master/Master_Drone_Detection/06_results/e0_1280_preflight_20261121/preflight.json) |
 | D · Negative selection | Do random backgrounds help, and does error-driven selection outperform random? | 🔴 Blocked · all six seeds | Freeze mining and matched verified negatives. Acquire an independent negative benchmark. |
 | E · External validation | Do results generalize to other recordings? | ⚪ Historical diagnostics / 🔴 final study blocked | Finish the prospective protocol and exposure audit before inference. |
 | F · Multi-detector re-benchmarking | Does reconstruction shift absolute performance or ranking? | 🔵 Planned | YOLOv8s, YOLO11s, YOLO26s, RT-DETR-R18 and Faster R-CNN are candidate families. |

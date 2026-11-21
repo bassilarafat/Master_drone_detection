@@ -66,6 +66,8 @@ flowchart TD
     Stats --> Freeze["Freeze method and operating point"]
     Freeze --> Rand["Matched E2/E3 studies"]
     Freeze --> Out["Locked external validation"]
+    Freeze --> R1280["E0@1280 resolution control"]
+    R1280 --> R1280pre["Synthetic preflight · batch4 marginal"]
     Nset["Independent verified negative benchmark"] --> Nscore["Evaluate background-only false alarms"]
     Rand --> Nscore
     Gate --> Matched["Matched split-effect and multi-detector studies"]

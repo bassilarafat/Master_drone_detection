@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "experiment_id": "E0_1280_resolution_control",
+  "status": "PROSPECTIVE_NOT_AUTHORIZED",
+  "purpose": "Resolution control comparing E0 at 1280 px against the official E0 at 960 px and E1-P2 at 960 px.",
+  "primary_research_question": "Can P2 at 960 px improve Tiny-UAV recall compared with raising baseline E0 input resolution to 1280 px?",
+  "base_arm": "E0",
+  "base_executable_protocol": "configs/paper/YOLO26_LAPTOP_V3_LOCK.json",
+  "base_protocol": "configs/paper/protocol_yolo26_v2.json",
+  "dataset": {
+    "release_id": "DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "development_split": "Clean_v2 Validation",
+    "test_use": "prohibited during development"
+  },
+  "seeds": [17, 42, 123],
+  "training": {
+    "epochs": 100,
+    "imgsz": 1280,
+    "physical_batch": 4,
+    "nominal_batch": 16,
+    "accumulation_steps": 4,
+    "optimizer": "MuSGD",
+    "amp": true,
+    "workers": 2,
+    "checkpoint": "last.pt at epoch 100",
+    "resume_policy": "same arm, seed and resolved configuration only"
+  },
+  "held_constant_from_v3": [
+    "Clean_v2 Train and Validation",
+    "pinned public shared-backbone initialization",
+    "optimizer and learning-rate schedule",
+    "augmentations",
+    "deterministic mode",
+    "epoch-100 last.pt checkpoint rule",
+    "official pinned evaluator",
+    "NMS 0.70",
+    "confidence 0.25",
+    "matching IoU 0.50",
+    "maximum detections 300"
+  ],
+  "only_intended_resolution_change": "train and evaluation imgsz 960 -> 1280",
+  "metrics": [
+    "AP50",
+    "AP50-95",
+    "Tiny recall",
+    "Small recall",
+    "Medium recall",
+    "Large recall",
+    "Precision",
+    "Recall",
+    "TP",
+    "FP",
+    "FN",
+    "inference latency",
+    "FPS",
+    "GPU peak memory",
+    "GPU reserved memory"
+  ],
+  "comparison": {
+    "primary": "E0@1280 minus E0@960, paired by seed",
+    "secondary": "E0@1280 versus E1@960 for the resolution-versus-P2 question",
+    "uncertainty": "three-seed paired mean and sample SD; no significance claim"
+  },
+  "execution_gates": [
+    "batch-4 AMP loss backward preflight passes",
+    "recorded peak allocated memory has operational margin",
+    "preflight never loads or evaluates Clean_v2 Test",
+    "prospective lock hashes all implementation and configuration inputs",
+    "all three seeds remain prespecified and complete"
+  ],
+  "explicit_exclusions": [
+    "E1@1280 is not part of this primary control",
+    "E2 and E3 remain blocked",
+    "Test remains unavailable for model development",
+    "historical and exploratory results are not mixed with this study"
+  ]
+}

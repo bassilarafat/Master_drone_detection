@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "experiment_id": "E0_1280_resolution_control",
+  "protocol": "configs/paper/E0_1280_RESOLUTION_CONTROL_V1.json",
+  "training_called": false,
+  "real_dataset_inference": false,
+  "test_inference_performed": false,
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "gpu_vram_bytes": 8546484224,
+  "imgsz": 1280,
+  "batch_candidates": [
+    {
+      "batch": 4,
+      "loss_finite": true,
+      "peak_allocated_bytes": 8496268800,
+      "peak_reserved_bytes": 10643046400
+    },
+    {
+      "batch": 3,
+      "loss_finite": true,
+      "peak_allocated_bytes": 6423716352,
+      "peak_reserved_bytes": 7843348480
+    },
+    {
+      "batch": 2,
+      "loss_finite": true,
+      "peak_allocated_bytes": 4334974976,
+      "peak_reserved_bytes": 5190451200
+    }
+  ],
+  "batch4_margin_bytes": 50215424,
+  "batch4_operational_margin": "narrow",
+  "recommendation": "Batch 4 completed the synthetic loss backward, but memory margin is narrow; no training launch until a prospective lock and real optimizer-state preflight are completed.",
+  "completed_at_utc": "2026-11-21T06:14:21.097155+00:00"
+}
