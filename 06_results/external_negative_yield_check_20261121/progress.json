@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETED",
+  "evidence_level": "EXPLORATORY",
+  "frames_expected": 2398,
+  "plan_sha256": "2ad809a4d47af1c81d102ffeaa1f4ee2975cd2283e1dc3798d4160f328760243",
+  "source_audit_sha256": "ecc65a6f67aa2ec6d55ceefb0a289c6e4960fb60cbd401edcd3be10c3d8c1dac",
+  "checkpoint_sha256": "7434f6c5c083992b16dfd9c9b818e8a8909afb8047ecd389cbab1a6a17c01f18",
+  "started_at_utc": "2026-11-21T03:58:36.379843+00:00",
+  "frames_processed": 2398,
+  "detections_at_threshold": 1,
+  "proposed_crops": 1,
+  "enough_proposals_for_512": false,
+  "independently_verified_negatives": null,
+  "training_performed": false,
+  "ended_at_utc": "2026-11-21T04:01:14.082041+00:00",
+  "interpretation": "Yield of unverified candidates at the predeclared threshold; no operational false-positive rate claimed"
+}

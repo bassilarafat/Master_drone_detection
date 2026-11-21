@@ -1,0 +1,16 @@
+{
+  "status": "PROTOCOL_QUALIFIED_SEPARATION",
+  "reference_images": 9451,
+  "external_frames": 2398,
+  "model_training_blocks": [
+    "BLOCK_00002"
+  ],
+  "external_candidate_blocks": [
+    "EXT_CANDIDATE_BLOCK_0001"
+  ],
+  "intersecting_block_ids": [],
+  "crossing_policy_links": 0,
+  "full_declared_pool_examined": true,
+  "native_recording_independence_proven": false,
+  "scope": "Separate connected allocation components in the declared joint candidate/risk graph"
+}

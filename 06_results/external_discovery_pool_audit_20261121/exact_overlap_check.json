@@ -1,0 +1,12 @@
+{
+  "status": "NO_EXACT_OVERLAP",
+  "external_frames": 2398,
+  "reference_images": 9451,
+  "overlap_count": 0,
+  "overlaps": [],
+  "pixel_hash_definition": "SHA256(width x height + colon + decoded RGB bytes)",
+  "reference_pixel_cache": "06_results/EXP004_targeted/audit/images.csv",
+  "reference_pixel_cache_sha256": "7ea8e55236bbcb6155ca8507a2812ae29b599545376c275bf67e06e7de43b663",
+  "reference_cache_reuse": "All retained image byte identities matched the cached decoded-pixel table",
+  "note": "Reference decoded-pixel hashes are reused by exact source-byte identity; external pixels freshly decoded"
+}

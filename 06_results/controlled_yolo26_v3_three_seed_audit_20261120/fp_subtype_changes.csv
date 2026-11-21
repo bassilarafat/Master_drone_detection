@@ -1,0 +1,16 @@
+﻿seed,subtype,E0,E1,delta
+17,Background,144,146,2
+17,Localization,54,53,-1
+17,Duplicate,9,7,-2
+17,ClassConfusion,0,0,0
+17,InvalidBox,0,0,0
+42,Background,113,166,53
+42,Localization,64,49,-15
+42,Duplicate,5,13,8
+42,ClassConfusion,0,0,0
+42,InvalidBox,0,0,0
+123,Background,150,193,43
+123,Localization,57,50,-7
+123,Duplicate,6,6,0
+123,ClassConfusion,0,0,0
+123,InvalidBox,0,0,0

@@ -1,0 +1,160 @@
+{
+  "status": "DIAGNOSTIC_SAMPLE_SCREEN",
+  "device": "cuda:0",
+  "samples": 18,
+  "checkpoint_sha256": "0b8b82f85de91b424aded121c7e1dcc2b7bc6d0adeea651bf73a13307fad8c73",
+  "repository_sha256": "fcda35cb8bc71761106565b73578998165b73734778c31d39a9f03e6841c2962",
+  "cls_reference_sha256": "9d2144ad8be5f4272c62055b6bcd563693a340a721f74d69a1779b576d758ba1",
+  "patch_reference_sha256": "39ff2c4e127251ed47122d492879a0b80a592600d6c8fba8b99cf77d8649fb8c",
+  "source_sample_sha256": "24fe3f56eaa26af6c558ae2062159aab0c5b7d22e1021c4f0398936bdc72061c",
+  "threshold": 0.85,
+  "threshold_semantics": "Either descriptor reaching .85 proposes conservative allocation co-membership",
+  "result_scope": "Only 18 predeclared Train video frames. Full candidate-pool geometry and grouping remain outstanding.",
+  "independent_allocation_blocks_verified": false,
+  "rows": [
+    {
+      "sequence": "20190926_193515_1_1",
+      "frame_index": 345,
+      "maximum_cosine": 0.36147964000701904,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "train/00096.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_1",
+      "frame_index": 500,
+      "maximum_cosine": 0.43093740940093994,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "train/00795.jpg",
+      "current_match_split": "val"
+    },
+    {
+      "sequence": "20190926_193515_1_1",
+      "frame_index": 927,
+      "maximum_cosine": 0.49691158533096313,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00258.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_2",
+      "frame_index": 36,
+      "maximum_cosine": 0.3757103681564331,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "test/01121.jpg",
+      "current_match_split": "val"
+    },
+    {
+      "sequence": "20190926_193515_1_2",
+      "frame_index": 482,
+      "maximum_cosine": 0.507626473903656,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00258.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_2",
+      "frame_index": 975,
+      "maximum_cosine": 0.43500691652297974,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_3",
+      "frame_index": 53,
+      "maximum_cosine": 0.4540937542915344,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_3",
+      "frame_index": 584,
+      "maximum_cosine": 0.4331164062023163,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "train/00274.jpg",
+      "current_match_split": "val"
+    },
+    {
+      "sequence": "20190926_193515_1_3",
+      "frame_index": 908,
+      "maximum_cosine": 0.4157242774963379,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_4",
+      "frame_index": 275,
+      "maximum_cosine": 0.4422396421432495,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_4",
+      "frame_index": 736,
+      "maximum_cosine": 0.44192445278167725,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "train/00274.jpg",
+      "current_match_split": "val"
+    },
+    {
+      "sequence": "20190926_193515_1_4",
+      "frame_index": 999,
+      "maximum_cosine": 0.40966641902923584,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_5",
+      "frame_index": 0,
+      "maximum_cosine": 0.4237819314002991,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "train/00274.jpg",
+      "current_match_split": "val"
+    },
+    {
+      "sequence": "20190926_193515_1_5",
+      "frame_index": 225,
+      "maximum_cosine": 0.4143868684768677,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "test/00201.jpg",
+      "current_match_split": "val"
+    },
+    {
+      "sequence": "20190926_193515_1_5",
+      "frame_index": 999,
+      "maximum_cosine": 0.4485006332397461,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_6",
+      "frame_index": 0,
+      "maximum_cosine": 0.41711708903312683,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "val/00101.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_6",
+      "frame_index": 28,
+      "maximum_cosine": 0.43077346682548523,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "train/02871.jpg",
+      "current_match_split": "train"
+    },
+    {
+      "sequence": "20190926_193515_1_6",
+      "frame_index": 55,
+      "maximum_cosine": 0.4720500111579895,
+      "broad_allocation_constraint_candidates": 0,
+      "top_match": "test/00050.jpg",
+      "current_match_split": "test"
+    }
+  ]
+}

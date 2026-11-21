@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "protocol_id": "Clean_v2_buffered_scene_oof_discovery_v1_draft",
+  "status": "REJECTED_BY_RESEARCHER_FULL_BLOCK_SEPARATION_REQUIRED",
+  "purpose": "Discover a Train-only negative candidate pool for the matched E2/E3 study",
+  "dataset_release": {
+    "release_id": "DUT_Anti_UAV_Clean_v2@ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "manifest_sha256": "ad46c518a7953ca3bafeeaa6d475cebe8fb196706cc078aa70b10d7e67a1a1d5",
+    "freeze_sha256": "9d26198e83d537b96734c48de3220fc0c46646e15d81525d8036d6eb57c6c058"
+  },
+  "prior_outcome_exposure": "All E0/E1 results for seeds 17,42,123 have already been inspected",
+  "proposed_partition": "graph_communities",
+  "partition_algorithm": {
+    "method": "Louvain weighted direct-risk scene graph, then whole-community image-count balancing",
+    "seed": 17,
+    "resolution": 1,
+    "networkx_version": "3.6.1"
+  },
+  "fold_role_manifests": {
+    "A": {
+      "path": "06_results/negative_mining_design_20261120/graph_communities/fold_A_roles.csv",
+      "sha256": "e1171fbaf98a47f9b825f198b30209f4b8773c1ce979e552521e824d73339a21"
+    },
+    "B": {
+      "path": "06_results/negative_mining_design_20261120/graph_communities/fold_B_roles.csv",
+      "sha256": "1b0e5af40c265123322f7e9c00a65bb53ecf7b17cef2ded9adf422c8f440d758"
+    },
+    "C": {
+      "path": "06_results/negative_mining_design_20261120/graph_communities/fold_C_roles.csv",
+      "sha256": "7eaeba7ac631ca35b521955a1cecb5fc8560e5d72a0838805115f9c19f19d758"
+    },
+    "D": {
+      "path": "06_results/negative_mining_design_20261120/graph_communities/fold_D_roles.csv",
+      "sha256": "970199c4b39dd833a243be88ab8d1cc6cadf232e7abd78b2f930253fe7ddfd49"
+    }
+  },
+  "sample_identity_canonical_sha256": "2850e34dd81cce6641a8d2c0533de1345ce5ada230cf7a79cc058c87a20c4514",
+  "risk_protection": "Hold out complete scene groups and remove all directly linked risk-neighbor groups, including the low-texture family",
+  "scope_limitation": "Indirect allocation paths and unresolved recording identities remain. This is narrower than full allocation-block independence.",
+  "full_allocation_block_independence": false,
+  "discovery_model": {
+    "architecture": "E1_Y26_P2",
+    "architecture_path": "configs/paper/yolo26s-p2-paper.yaml",
+    "expected_strides": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "seed": 17,
+    "checkpoint_rule": "last.pt at epoch100",
+    "initialization": {
+      "mode": "pinned_public_backbone_transfer",
+      "donor": "05_models/pretrained/paper/yolo26s.pt",
+      "donor_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+      "publisher_commit": "45588070f19053475015dd860367c7780dd34b2a",
+      "transfer_scope": "backbone_modules_0_to_10",
+      "transferred_tensors": 240,
+      "source_backbone_sha256": "b928e4ec27534c8a27f038005eb76ae934b7858af32a9f8f60a0192e988823a3",
+      "neck_and_heads": "seed_initialized",
+      "full_network_pretrained": false
+    },
+    "training_settings_reference": "configs/paper/YOLO26_LAPTOP_V3_LOCK.json",
+    "prospective_differences": [
+      "Fold-specific Train subset after buffer exclusion",
+      "Discovery training only, no Validation-based selection or checkpoint ranking"
+    ],
+    "epochs": 100,
+    "validation_during_discovery": false
+  },
+  "candidate_rule": {
+    "population": "Current Train mining role only",
+    "geometric_category": "Background",
+    "confidence_min": 0.5,
+    "matching_iou": 0.5,
+    "prediction_floor": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "imgsz": 960,
+    "crop_size": [
+      256,
+      256
+    ],
+    "annotated_uav_margin_px": 16,
+    "max_accepted_per_source_image": 1,
+    "proposal_limit": 1024,
+    "shortfall_rule": "Record insufficient candidates explicitly. Any score/size/count change needs a new version with exposure history."
+  },
+  "matched_bundle": {
+    "hard_count": 512,
+    "random_count": 512,
+    "random_seed": 17,
+    "source_identity_frequencies_equal": true,
+    "crop_dimensions_equal": true,
+    "fixed_bundle_across_training_seeds": true,
+    "public_initialization_for_E2_E3": true,
+    "actual_optimizer_update_parity_required": true
+  },
+  "review": {
+    "status": "PENDING",
+    "review_each_crop_and_full_context": true,
+    "independent_uav_free_verification_required": true,
+    "ambiguous_candidates": "exclude pending adjudication",
+    "geometric_screen_is_verified_negative": false
+  },
+  "execution_state": {
+    "discovery_training_started": false,
+    "negative_mining_started": false,
+    "E2_E3_training_started": false,
+    "implementation": "Prospective v3-compatible discovery/export integration pending"
+  },
+  "required_next_decision": "Accept direct-risk-buffered discovery scope with residual indirect dependence, or require a separate allocation-independent discovery pool",
+  "decision_record": "configs/paper/negative_mining_design_decision_20261121.json"
+}

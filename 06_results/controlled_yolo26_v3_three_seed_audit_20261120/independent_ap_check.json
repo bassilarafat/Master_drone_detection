@@ -1,0 +1,49 @@
+{
+  "status": "VERIFIED",
+  "method": "Independent NumPy IoU, score-ordered greedy matching and reverse precision envelope at 101 recall levels",
+  "tolerance": 1e-12,
+  "runs": [
+    {
+      "arm": "E0",
+      "seed": 17,
+      "AP50": 0.8052656358208057,
+      "AP50_95": 0.5201866780487963,
+      "all_10_thresholds_match": true
+    },
+    {
+      "arm": "E0",
+      "seed": 42,
+      "AP50": 0.7878195493070205,
+      "AP50_95": 0.5160989378477601,
+      "all_10_thresholds_match": true
+    },
+    {
+      "arm": "E0",
+      "seed": 123,
+      "AP50": 0.7953941798968069,
+      "AP50_95": 0.5208135235586691,
+      "all_10_thresholds_match": true
+    },
+    {
+      "arm": "E1",
+      "seed": 17,
+      "AP50": 0.8246155434565327,
+      "AP50_95": 0.5400775760190473,
+      "all_10_thresholds_match": true
+    },
+    {
+      "arm": "E1",
+      "seed": 42,
+      "AP50": 0.8106468478198363,
+      "AP50_95": 0.5273450505819606,
+      "all_10_thresholds_match": true
+    },
+    {
+      "arm": "E1",
+      "seed": 123,
+      "AP50": 0.8054732799245166,
+      "AP50_95": 0.5228775361877208,
+      "all_10_thresholds_match": true
+    }
+  ]
+}

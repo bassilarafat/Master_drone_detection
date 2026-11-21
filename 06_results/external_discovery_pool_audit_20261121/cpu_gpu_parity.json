@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED",
+  "sample_pairs": 128,
+  "selection": "64 evenly spaced pairs from each geometry-decision stratum",
+  "decision_mismatches": 0,
+  "risk_reason_mismatches": 0,
+  "full_pair_count": 10431,
+  "geometry_reason_counts": {
+    "too_few_mutual_matches": 9623,
+    "insufficient_local_texture": 808
+  },
+  "maximum_ransac_inliers": 0,
+  "scope": "CPU/GPU decision parity in the diagnostic sample"
+}

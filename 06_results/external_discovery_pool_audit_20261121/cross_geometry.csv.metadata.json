@@ -1,0 +1,29 @@
+{
+  "candidates_sha256": "c301e34a255b6fb41458617c08b460823a9da0d7eb9ab0f09c37fd798db39aa8",
+  "feature_index_sha256": "215704d71162a7c825373136bd591985669fd016df51acc7bf585e6464e7cee1",
+  "policy": {
+    "ratio": 0.75,
+    "ransac_px": 3.0,
+    "min_inliers": 24,
+    "min_inlier_ratio": 0.55,
+    "min_hull_coverage": 0.1,
+    "min_grid_cells": 6,
+    "max_median_error": 1.5,
+    "max_p95_error": 3.5,
+    "min_projected_area_ratio": 0.08,
+    "max_projected_area_ratio": 12.0,
+    "min_projected_overlap": 0.15
+  },
+  "backend": "GPU float32 L2; exact candidate refinement with conservative-margin direct fallback; mutual Lowe ratio; OpenCV RANSAC",
+  "batch_size": 16,
+  "device": "cuda:0",
+  "code_sha256": "41e76a7588c174f1685ee81c7c7612278e471b3f6abae8e52644999ad4311a67",
+  "processed_new": 10431,
+  "previous_pairs": 0,
+  "complete": true,
+  "counts": {
+    "NO_GEOMETRIC_SUPPORT": 9623,
+    "REVIEW": 808
+  },
+  "elapsed_seconds": 46.17200000002049
+}

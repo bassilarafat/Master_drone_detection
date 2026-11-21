@@ -1,0 +1,22 @@
+{
+  "reviewed_at_utc": "2026-11-21T03:53:00.868757+00:00",
+  "local_folder": "02_datasets/antiuav_rgpt",
+  "identity_status": "Local archive not cryptographically bound to a specific upstream release",
+  "primary_source": "https://github.com/ucas-vg/Anti-UAV/blob/main/README.md",
+  "source_findings": [
+    "Official project describes a multimodal Anti-UAV tracking benchmark",
+    "README publishes modality-specific annotation start-frame corrections",
+    "For other sequences README refers to first UAV-existence frame as the start"
+  ],
+  "local_findings": [
+    "visible.mp4 and visible.json files with exist and gt_rect arrays",
+    "Local split directory counts 160 Train, 67 Validation and 91 Test",
+    "Chosen family is 20190926_193515, present in local Train only under the filename-prefix rule"
+  ],
+  "limits": [
+    "Repository contents alone do not establish the download archive identity",
+    "Existence flag 0 requires independent interpretation before labeling a training image UAV-free",
+    "Filename-prefix isolation does not prove native recording or scene independence",
+    "Dataset-use license and exact corrected-release identity remain to be documented before final publication"
+  ]
+}

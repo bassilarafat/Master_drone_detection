@@ -1,0 +1,41 @@
+{
+  "status": "BLOCKED_PENDING_DESIGN_AND_VERIFIED_BUNDLES",
+  "source_partition": "Clean_v2 Train",
+  "train_images": 6299,
+  "scene_groups": 1064,
+  "allocation_blocks": 1,
+  "diagnostic_fold_images": {
+    "A": 1575,
+    "B": 1575,
+    "C": 1575,
+    "D": 1574
+  },
+  "diagnostic_fold_scene_groups": {
+    "A": 265,
+    "B": 266,
+    "C": 267,
+    "D": 266
+  },
+  "explicit_identity_constraint_rows": {
+    "train_train_rows": 267493,
+    "same_fold_rows": 200711,
+    "cross_fold_rows": 66782
+  },
+  "constraint_file_sha256": "29cd2a95783778037007d30c2b7ac03b99446e71abd94d94099cb833472d4264",
+  "existing_paper_negative_helper": "Legacy protocol.json / E1.yaml / E1 seed17 Train export required",
+  "v3_executable": "yolo26_workflow explicitly blocks E2/E3; verified v3 bundle integration pending",
+  "crop_dimension_from_existing_helper": [
+    256,
+    256
+  ],
+  "crop_count_per_arm": 512,
+  "fold_status": "Unapproved diagnostic assignment, scene-group-disjoint with crossing conservative constraints",
+  "missing": [
+    "Prospective amendment for OOF policy and source-overlap handling",
+    "Cross-fitted discovery model checkpoints and Train-only predictions",
+    "512 independently verified UAV-free hard crops and 512 matched random crops",
+    "Frozen shared bundle, source/crop hashes and reviewer provenance",
+    "v3 E2/E3 integration, preflight and actual optimizer-update parity",
+    "Independent held-out negative evaluation dataset and locked external protocol"
+  ]
+}

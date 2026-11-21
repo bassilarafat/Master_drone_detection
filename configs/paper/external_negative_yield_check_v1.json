@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "plan_id": "RGPT_Train_independent_source_yield_check_v1",
+  "status": "FROZEN_EXPLORATORY_DIAGNOSTIC_RULES",
+  "written_at_utc": "2026-11-21T03:49:07.416334+00:00",
+  "purpose": "Assess whether the predeclared allocation-separated source yields enough reviewable negative candidates",
+  "evidence_level": "EXPLORATORY",
+  "source_index": "06_results/external_discovery_pool_audit_20261121/frame_index.csv",
+  "required_source_audit": "06_results/external_discovery_pool_audit_20261121/pool_audit.json",
+  "required_source_status": "NO_DECLARED_PROTOCOL_CROSSING_FOUND",
+  "require_allocation_separation": true,
+  "model": {
+    "arm": "E1",
+    "seed": 17,
+    "checkpoint": "04_experiments/controlled_yolo26_v3/E1_Y26_P2/seed_17/run/weights/last.pt",
+    "sha256": "7434f6c5c083992b16dfd9c9b818e8a8909afb8047ecd389cbab1a6a17c01f18",
+    "epoch": 100
+  },
+  "inference": {
+    "imgsz": 960,
+    "confidence": 0.5,
+    "nms": true,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "batch": 4,
+    "rect": false,
+    "augment": false,
+    "device": "0"
+  },
+  "crop": {
+    "width": 256,
+    "height": 256,
+    "max_proposals": 1024,
+    "max_per_source_frame": 1,
+    "ranking": "Descending confidence, then sequence, frame index and prediction index"
+  },
+  "annotations": "Source existence flag 0 only; UAV-free status remains unverified until independent review",
+  "timing": "Rules recorded before detector predictions on this external source",
+  "shortfall_rule": "Report insufficient proposals. Retain these rules and outcomes before proposing any new threshold, source or sampling version.",
+  "paper_use": "Diagnostic only. E2/E3 still require a prospective source amendment and 512 independently verified matched crops per arm.",
+  "approval_source": "Researcher requested continued work and explicitly required full allocation-block separation"
+}

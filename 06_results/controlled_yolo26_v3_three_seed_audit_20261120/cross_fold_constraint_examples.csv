@@ -1,0 +1,21 @@
+﻿image_a,image_b,constraint,reason,fold_a,fold_b
+train/04933.jpg,train/04949.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",B,A
+train/04951.jpg,train/04954.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04955.jpg,val/02479.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04954.jpg,train/04955.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",B,C
+train/04933.jpg,train/04951.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",B,C
+train/04923.jpg,train/04933.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04939.jpg,train/04941.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,A
+train/04944.jpg,val/02479.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",D,B
+train/04956.jpg,val/02478.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",D,B
+train/04923.jpg,train/04929.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04944.jpg,train/04947.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",D,C
+train/04951.jpg,val/02479.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04923.jpg,train/04949.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,A
+train/04926.jpg,train/04933.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04923.jpg,val/02465.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04947.jpg,val/02479.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04955.jpg,val/02478.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B
+train/04932.jpg,val/02465.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",A,B
+train/04944.jpg,val/02478.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",D,B
+train/04947.jpg,val/02478.jpg,COLOCATE_UNRESOLVED_IDENTITY,"Broad conservative global retrieval; allocation only, including semantically similar distinct scenes.",C,B

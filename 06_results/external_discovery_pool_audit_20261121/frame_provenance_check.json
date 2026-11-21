@@ -1,0 +1,10 @@
+{
+  "status": "VERIFIED",
+  "all_candidate_frame_ids_match": true,
+  "candidate_count": 2398,
+  "all_source_existence_flags_zero": true,
+  "all_current_source_partitions": "external Train",
+  "sample_decode_parity_frames": 18,
+  "decode_parity_definition": "PNG bytes identical for sequential extraction versus the prior fixed-frame sample",
+  "negative_uav_free_status": "UNVERIFIED"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "plan_id": "RGPT_Train_independent_source_yield_check_v2_operating_point",
+  "status": "FROZEN_EXPLORATORY_DIAGNOSTIC_RULES",
+  "written_at_utc": "2026-11-21T04:05:56.920649+00:00",
+  "purpose": "Assess whether the predeclared allocation-separated source yields enough reviewable negative candidates",
+  "evidence_level": "EXPLORATORY",
+  "source_index": "06_results/external_discovery_pool_audit_20261121/frame_index.csv",
+  "required_source_audit": "06_results/external_discovery_pool_audit_20261121/pool_audit.json",
+  "required_source_status": "NO_DECLARED_PROTOCOL_CROSSING_FOUND",
+  "require_allocation_separation": true,
+  "model": {
+    "arm": "E1",
+    "seed": 17,
+    "checkpoint": "04_experiments/controlled_yolo26_v3/E1_Y26_P2/seed_17/run/weights/last.pt",
+    "sha256": "7434f6c5c083992b16dfd9c9b818e8a8909afb8047ecd389cbab1a6a17c01f18",
+    "epoch": 100
+  },
+  "inference": {
+    "imgsz": 960,
+    "confidence": 0.25,
+    "nms": true,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "batch": 4,
+    "rect": false,
+    "augment": false,
+    "device": "0"
+  },
+  "crop": {
+    "width": 256,
+    "height": 256,
+    "max_proposals": 1024,
+    "max_per_source_frame": 1,
+    "ranking": "Descending confidence, then sequence, frame index and prediction index"
+  },
+  "annotations": "Source existence flag 0 only; UAV-free status remains unverified until independent review",
+  "timing": "Version2 recorded prospectively after observing version1 and before version2 predictions.",
+  "shortfall_rule": "Report insufficient proposals. Retain these rules and outcomes before proposing any new threshold, source or sampling version.",
+  "paper_use": "Diagnostic only. E2/E3 still require a prospective source amendment and 512 independently verified matched crops per arm.",
+  "approval_source": "Researcher requested continued work and explicitly required full allocation-block separation",
+  "amendment": {
+    "previous_plan": "configs/paper/external_negative_yield_check_v1.json",
+    "previous_plan_sha256": "2ad809a4d47af1c81d102ffeaa1f4ee2975cd2283e1dc3798d4160f328760243",
+    "prior_exposure": {
+      "v1_confidence": 0.5,
+      "v1_proposed_crops": 1
+    },
+    "reason": "Assess candidate supply at the existing official operating confidence .25. The .50 diagnostic threshold was an initial engineering choice, not a required E2/E3 scientific condition.",
+    "allowed_change": "Confidence .50 to .25 only; preserve model, cohort, crop count rules and all version1 results.",
+    "interpretation": "Exploratory source-development diagnostic. Preserve both outcomes without treating threshold selection as an official causal experiment."
+  }
+}

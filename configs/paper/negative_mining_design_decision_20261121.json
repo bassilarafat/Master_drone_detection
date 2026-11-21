@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-21T03:45:57.374973+00:00",
+  "client_date": "2026-11-21",
+  "decision": "REQUIRE_FULL_ALLOCATION_BLOCK_SEPARATION",
+  "decision_source": "Researcher explicitly selected full allocation-block separation in the active conversation.",
+  "internal_direct_neighbor_buffering_accepted": false,
+  "internal_balanced_oof_accepted": false,
+  "current_clean_v2_train_allocation_blocks": 1,
+  "strict_internal_discovery_training_images": 0,
+  "allowed_next_work": "Investigate an independently allocated discovery source; preserve original frozen releases and controlled endpoints",
+  "external_source_status": "Candidate source under audit, not approved for mining or training",
+  "provenance_note": "Filename families alone do not prove native recording identities or cross-release independence"
+}

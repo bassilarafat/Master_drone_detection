@@ -1,0 +1,8 @@
+{
+  "train_filename_families": 27,
+  "all_train_absence_flag_frames": 7336,
+  "tested_v1_candidate_frames": 2398,
+  "other_train_absence_flag_frames": 4938,
+  "meaning": "Other Train families are not proven allocation-independent. The v1 exclusion is a conservative diagnostic reservation rule, not a general prohibition on future source designs.",
+  "future_change": "Any broader source population must be separately audited and prospectively versioned, including its implications for reserved external evaluation families."
+}
